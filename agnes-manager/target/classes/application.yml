@@ -1,0 +1,23 @@
+server:
+  port: 8004
+
+spring:
+  application:
+    name: manager
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/agnes?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka/
+mybatis:
+  mapper-locations: mapper/**Mapper.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+

@@ -1,0 +1,16 @@
+server:
+# 设置服务注册中心端口号
+  port: 8001
+
+eureka:
+  instance:
+  # 设置注册中心实例主机名
+    hostname: localhost
+  client:
+  # 是否向注册中心注册自己
+    registerWithEureka: false
+    # 是否检索服务
+    fetchRegistry: false
+    # 服务注册中心的配置内容，指定服务注册中心的位置
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/

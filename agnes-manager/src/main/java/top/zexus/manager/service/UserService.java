@@ -1,7 +1,6 @@
 package top.zexus.manager.service;
 
 import top.zexus.common.utils.Result;
-import top.zexus.manager.domain.User;
 
 /**
  * @Author: Zexus

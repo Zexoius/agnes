@@ -1,4 +1,4 @@
-package top.zexus.manager.domain;
+package top.zexus.manager.Dto;
 
 import top.zexus.common.pojo.TbProduct;
 import top.zexus.common.pojo.TbUser;

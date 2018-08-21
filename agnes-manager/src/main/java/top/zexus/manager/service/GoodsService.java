@@ -20,4 +20,11 @@ public interface GoodsService {
      * @return
      */
     Result getAllGoods(int page,int size,String sort,Long cid,int priceGt,int priceLt);
+
+    /**
+     * 商品详情
+     * @param goodsId
+     * @return
+     */
+    Result goodsDetail(Long goodsId);
 }

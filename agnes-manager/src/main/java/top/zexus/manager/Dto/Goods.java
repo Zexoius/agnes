@@ -1,8 +1,7 @@
-package top.zexus.manager.domain;
+package top.zexus.manager.Dto;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.util.Date;
 
 /**
  * @Author: Zexus

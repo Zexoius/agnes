@@ -1,13 +1,12 @@
 package top.zexus.manager.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import top.zexus.common.mapper.TbUserMapper;
 import top.zexus.common.pojo.TbUser;
 import top.zexus.common.pojo.TbUserExample;
 import top.zexus.common.utils.Result;
-import top.zexus.manager.domain.DtoUtils;
-import top.zexus.manager.domain.User;
+import top.zexus.manager.Dto.DtoUtils;
+import top.zexus.manager.Dto.User;
 
 import javax.annotation.Resource;
 import java.util.List;

@@ -1,4 +1,4 @@
-package top.zexus.manager.domain;
+package top.zexus.manager.Dto;
 
 import java.io.Serializable;
 

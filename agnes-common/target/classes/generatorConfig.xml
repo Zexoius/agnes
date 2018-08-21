@@ -32,8 +32,8 @@
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
 		<!-- targetProject:mapper映射文件生成的位置 -->
-		<sqlMapGenerator targetPackage="top.zexus.common.mapper"
-				targetProject=".\src\main\java\">
+		<sqlMapGenerator targetPackage="\mapper"
+				targetProject="..\agnes-manager\src\main\resources\">
 			<!-- enableSubPackages:是否让schema作为包的后缀 -->
 			<property name="enableSubPackages" value="false" />
 		</sqlMapGenerator>
@@ -45,7 +45,9 @@
 			<property name="enableSubPackages" value="false" />
 		</javaClientGenerator>
 		<!-- 指定数据库表 -->
-		<table schema="" tableName="tb_user"></table>
-		<table schema="" tableName="tb_product"></table>
+		<!--<table schema="" tableName="tb_user"></table>-->
+		<!--<table schema="" tableName="tb_product"></table>-->
+		<table schema="" tableName="tb_product_detail"></table>
+
 	</context>
 </generatorConfiguration>

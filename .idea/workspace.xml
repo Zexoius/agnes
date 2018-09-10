@@ -2,17 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b420a55-49d8-4dae-ad1d-83a7c5244d78" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/Dto/GoodsDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/agnes-common/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/Jedis/JedisClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/Jedis/JedisConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/Jedis/JedisPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/controller/CartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/service/CartService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/service/CartServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agnes-common/src/main/resources/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-common/src/main/resources/generatorConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agnes-common/target/classes/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-common/target/classes/generatorConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agnes-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/utils/JSONUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/utils/JSONUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/utils/JwtUtiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/utils/JwtUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/utils/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/utils/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/utils/StringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/utils/StringUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/AgnesCommonApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/AgnesCommonApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/constants/CommonConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/constants/CommonConstants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/mapper/TbProductDetailMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/mapper/TbProductDetailMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/mapper/TbProductMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/mapper/TbProductMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/mapper/TbUserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/mapper/TbUserMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/pojo/AllGoodsResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/pojo/AllGoodsResult.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/pojo/TbProduct.class" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/pojo/TbProduct.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/pojo/TbProductDetail.class" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/pojo/TbProductDetail.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/pojo/TbProductDetailExample$Criteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/pojo/TbProductDetailExample$Criteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/pojo/TbProductDetailExample$Criterion.class" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/pojo/TbProductDetailExample$Criterion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/pojo/TbProductDetailExample$GeneratedCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/pojo/TbProductDetailExample$GeneratedCriteria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/pojo/TbProductDetailExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/pojo/TbProductDetailExample.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/pojo/TbProductExample$Criteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/pojo/TbProductExample$Criteria.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/pojo/TbProductExample$Criterion.class" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/pojo/TbProductExample$Criterion.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/pojo/TbProductExample$GeneratedCriteria.class" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/pojo/TbProductExample$GeneratedCriteria.class" afterDir="false" />
@@ -25,25 +39,27 @@
       <change beforePath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/pojo/UserToken.class" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/pojo/UserToken.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/pojo/dto/LoginDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/pojo/dto/LoginDto.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/utils/JSONUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/utils/JSONUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/utils/JwtUtiles.class" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/utils/JwtUtiles.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/utils/JwtUtiles.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/utils/PageUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/utils/PageUtils.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/utils/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/utils/Result.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/utils/StringUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-common/target/classes/top/zexus/common/utils/StringUtils.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agnes-manager/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-manager/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/controller/GoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/controller/GoodsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/domain/DtoUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/Dto/DtoUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/domain/Goods.java" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/Dto/Goods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/Dto/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/service/GoodsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/service/GoodsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/service/GoodsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/service/GoodsServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/Dto/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/Dto/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agnes-manager/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-manager/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agnes-manager/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-manager/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agnes-manager/target/classes/top/zexus/manager/AgnesManagerApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-manager/target/classes/top/zexus/manager/AgnesManagerApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agnes-manager/target/classes/top/zexus/manager/Dto/DtoUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-manager/target/classes/top/zexus/manager/Dto/DtoUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agnes-manager/target/classes/top/zexus/manager/Dto/Goods.class" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-manager/target/classes/top/zexus/manager/Dto/Goods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agnes-manager/target/classes/top/zexus/manager/Dto/GoodsDetail.class" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-manager/target/classes/top/zexus/manager/Dto/GoodsDetail.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agnes-manager/target/classes/top/zexus/manager/Dto/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-manager/target/classes/top/zexus/manager/Dto/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agnes-manager/target/classes/top/zexus/manager/controller/GoodsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-manager/target/classes/top/zexus/manager/controller/GoodsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agnes-manager/target/classes/top/zexus/manager/domain/DtoUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/agnes-manager/target/classes/top/zexus/manager/domain/Goods.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/agnes-manager/target/classes/top/zexus/manager/domain/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/agnes-manager/target/classes/top/zexus/manager/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-manager/target/classes/top/zexus/manager/controller/UserController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agnes-manager/target/classes/top/zexus/manager/service/GoodsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-manager/target/classes/top/zexus/manager/service/GoodsService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agnes-manager/target/classes/top/zexus/manager/service/GoodsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-manager/target/classes/top/zexus/manager/service/GoodsServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agnes-manager/target/classes/top/zexus/manager/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-manager/target/classes/top/zexus/manager/service/UserService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agnes-manager/target/classes/top/zexus/manager/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-manager/target/classes/top/zexus/manager/service/UserServiceImpl.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -75,153 +91,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="GoodsController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/controller/GoodsController.java">
+      <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/service/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="120">
+              <caret line="115" column="46" lean-forward="true" selection-start-line="115" selection-start-column="46" selection-end-line="115" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GoodsDetail.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/Dto/GoodsDetail.java">
+      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/service/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="206">
+              <caret line="36" column="20" lean-forward="true" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/controller/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="42" column="45" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JwtUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/utils/JwtUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="40" column="29" lean-forward="true" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#422#423#0" expanded="true" />
-                <element signature="e#451#452#0" expanded="true" />
-                <element signature="e#495#496#0" expanded="true" />
-                <element signature="e#531#532#0" expanded="true" />
-                <element signature="e#464#465#0" expanded="true" />
-                <element signature="e#494#495#0" expanded="true" />
-                <element signature="e#538#539#0" expanded="true" />
-                <element signature="e#576#577#0" expanded="true" />
-                <element signature="e#612#613#0" expanded="true" />
-                <element signature="e#640#641#0" expanded="true" />
-                <element signature="e#686#687#0" expanded="true" />
-                <element signature="e#720#721#0" expanded="true" />
-                <element signature="e#752#753#0" expanded="true" />
-                <element signature="e#780#781#0" expanded="true" />
-                <element signature="e#822#823#0" expanded="true" />
-                <element signature="e#856#857#0" expanded="true" />
-                <element signature="e#894#895#0" expanded="true" />
-                <element signature="e#928#929#0" expanded="true" />
-                <element signature="e#982#983#0" expanded="true" />
-                <element signature="e#1028#1029#0" expanded="true" />
-                <element signature="e#1070#1071#0" expanded="true" />
-                <element signature="e#1108#1109#0" expanded="true" />
-                <element signature="e#1170#1171#0" expanded="true" />
-                <element signature="e#1224#1225#0" expanded="true" />
-                <element signature="e#1269#1270#0" expanded="true" />
-                <element signature="e#1309#1310#0" expanded="true" />
-                <element signature="e#1376#1377#0" expanded="true" />
-                <element signature="e#1434#1435#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TbProductMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/mapper/TbProductMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="generatorConfig.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/agnes-common/src/main/resources/generatorConfig.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-39">
-              <caret line="39" column="44" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TbProductDetail.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/pojo/TbProductDetail.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TbProductDetailExample.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/pojo/TbProductDetailExample.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GoodsServiceImpl.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/service/GoodsServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="24" column="8" lean-forward="true" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
-              <folding>
-                <element signature="method#getAllGoods#0;class#GoodsServiceImpl#0" />
-                <element signature="e#1032#1039#0" expanded="true" />
-                <element signature="e#1612#1623#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/agnes-manager/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="81" column="40" selection-start-line="81" selection-start-column="40" selection-end-line="81" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Result.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/utils/Result.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
-              <folding>
-                <element signature="e#1163#1164#0" expanded="true" />
-                <element signature="e#1198#1199#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Goods.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/Dto/Goods.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-171">
-              <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-              <folding>
-                <element signature="e#437#438#0" expanded="true" />
-                <element signature="e#469#470#0" expanded="true" />
-                <element signature="e#517#518#0" expanded="true" />
-                <element signature="e#559#560#0" expanded="true" />
-                <element signature="e#599#600#0" expanded="true" />
-                <element signature="e#631#632#0" expanded="true" />
-                <element signature="e#685#686#0" expanded="true" />
-                <element signature="e#727#728#0" expanded="true" />
-                <element signature="e#765#766#0" expanded="true" />
-                <element signature="e#799#800#0" expanded="true" />
-                <element signature="e#853#854#0" expanded="true" />
-                <element signature="e#899#900#0" expanded="true" />
-                <element signature="e#934#935#0" expanded="true" />
-                <element signature="e#965#966#0" expanded="true" />
-                <element signature="e#1013#1014#0" expanded="true" />
-                <element signature="e#1053#1054#0" expanded="true" />
-                <element signature="e#1095#1096#0" expanded="true" />
-                <element signature="e#1133#1134#0" expanded="true" />
-                <element signature="e#1195#1196#0" expanded="true" />
-                <element signature="e#1249#1250#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -233,6 +136,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="spring-beans.schema" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -251,23 +156,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/pojo/TbUserExample.java" />
-        <option value="$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/constants/CommonConstants.java" />
-        <option value="$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/utils/PageUtils.java" />
-        <option value="$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/utils/HttpContextUtils.java" />
-        <option value="$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/aspect/LogAspect.java" />
-        <option value="$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/intercepter/FeignIntercepter.java" />
-        <option value="$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/pojo/Log.java" />
-        <option value="$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/service/LogRpcService.java" />
-        <option value="$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/utils/JsonUtils.java" />
-        <option value="$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/utils/StringUtils.java" />
-        <option value="$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/utils/JSONUtils.java" />
-        <option value="$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/utils/JwtUtiles.java" />
-        <option value="$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/pojo/UserToken.java" />
-        <option value="$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/context/FilterContextHandler.java" />
-        <option value="$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/intercepter/AuthIntercepter.java" />
-        <option value="$PROJECT_DIR$/agnes-zuul/src/main/java/top/zexus/zuul/service/LoginService.java" />
-        <option value="$PROJECT_DIR$/agnes-zuul/src/main/java/top/zexus/zuul/filter/AccessFilter.java" />
         <option value="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/domain/Member.java" />
         <option value="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/domain/User.java" />
         <option value="$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/utils/DtoUtils.java" />
@@ -275,20 +163,13 @@
         <option value="$PROJECT_DIR$/agnes-manager/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/pojo/dto/MenuDto.java" />
         <option value="$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/pojo/dto/LoginDto.java" />
-        <option value="$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/utils/Result.java" />
         <option value="$PROJECT_DIR$/agnes-server/src/main/java/top/zexus/server/AgnesServerApplication.java" />
         <option value="$PROJECT_DIR$/agnes-server/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/agnes-common/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/agnes-common/pom.xml" />
         <option value="$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/mapper/TbUserMapper.java" />
-        <option value="$PROJECT_DIR$/agnes-manager/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/agnes-zuul/pom.xml" />
         <option value="$PROJECT_DIR$/agnes-zuul/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/agnes-zuul/src/main/java/top/zexus/zuul/AgnesZuulApplication.java" />
-        <option value="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/service/UserService.java" />
         <option value="$PROJECT_DIR$/agnes-parent/pom.xml" />
-        <option value="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/service/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/domain/Goods.java" />
         <option value="$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/pojo/AllGoodsResult.java" />
         <option value="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/domain/DtoUtils.java" />
@@ -301,7 +182,31 @@
         <option value="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/Dto/GoodsDetail.java" />
         <option value="$PROJECT_DIR$/agnes-common/src/main/resources/generatorConfig.xml" />
         <option value="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/service/GoodsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/service/CartService.java" />
+        <option value="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/service/CartServiceImpl.java" />
+        <option value="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/controller/CartController.java" />
+        <option value="$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/utils/JedisClient.java" />
+        <option value="$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/utils/JedisClientPool.java" />
+        <option value="$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/utils/jedisClientCluster.java" />
+        <option value="$PROJECT_DIR$/agnes-manager/src/main/resources/config/resources.properties" />
+        <option value="$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/utils/JedisConfig.java" />
+        <option value="$PROJECT_DIR$/agnes-manager/src/main/resources/conf/applicationContext-redis.xml" />
+        <option value="$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/utils/JSONUtils.java" />
+        <option value="$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/utils/StringUtils.java" />
+        <option value="$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/pojo/UserToken.java" />
+        <option value="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/Dto/User.java" />
+        <option value="$PROJECT_DIR$/agnes-common/pom.xml" />
+        <option value="$PROJECT_DIR$/agnes-manager/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/agnes-common/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/agnes-manager/pom.xml" />
+        <option value="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/Jedis/JedisClient.java" />
+        <option value="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/Jedis/JedisPool.java" />
+        <option value="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/Jedis/JedisConfig.java" />
+        <option value="$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/utils/JwtUtils.java" />
+        <option value="$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/utils/Result.java" />
+        <option value="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/service/UserService.java" />
+        <option value="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/service/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/controller/UserController.java" />
       </list>
     </option>
   </component>
@@ -321,34 +226,28 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="agnes-common" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="agnes-manager" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-      </expand>
+      <expand />
       <select />
     </treeState>
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
-    <option name="width" value="1555" />
-    <option name="height" value="840" />
+    <option name="width" value="1939" />
+    <option name="height" value="1049" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -389,6 +288,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="constants" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="agnes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agnes-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
               <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -399,6 +307,15 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="common" type="462c0819:PsiDirectoryNode" />
               <item name="pojo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="agnes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agnes-common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="agnes" type="b2602c69:ProjectViewProjectNode" />
@@ -453,7 +370,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="manager" type="462c0819:PsiDirectoryNode" />
-              <item name="Dto" type="462c0819:PsiDirectoryNode" />
+              <item name="Jedis" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="agnes" type="b2602c69:ProjectViewProjectNode" />
@@ -473,23 +390,14 @@
             </path>
             <path>
               <item name="agnes" type="b2602c69:ProjectViewProjectNode" />
-              <item name="agnes-manager" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="agnes" type="b2602c69:ProjectViewProjectNode" />
               <item name="agnes-parent" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -508,11 +416,15 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="spring.boot" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\agnes\agnes-manager\src\main\resources\conf" />
       <recent name="E:\agnes\agnes-common\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="top.zexus.common.utils" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\agnes\agnes-manager\src\main\resources\mapper" />
@@ -610,10 +522,6 @@
         </option>
       </MavenSettings>
     </configuration>
-    <configuration name="AgnesCommonApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="agnes-common" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="top.zexus.common.AgnesCommonApplication" />
-    </configuration>
     <configuration name="AgnesManagerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="agnes-manager" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="top.zexus.manager.AgnesManagerApplication" />
@@ -652,7 +560,6 @@
     <list>
       <item itemvalue="Spring Boot.AgnesServerApplication" />
       <item itemvalue="Spring Boot.AgnesZuulApplication" />
-      <item itemvalue="Spring Boot.AgnesCommonApplication" />
       <item itemvalue="Spring Boot.AgnesManagerApplication" />
       <item itemvalue="Maven.[clean]" />
       <item itemvalue="Maven.[install]" />
@@ -696,11 +603,19 @@
       <workItem from="1534258230030" duration="1793000" />
       <workItem from="1534492843915" duration="5059000" />
       <workItem from="1534838526924" duration="6740000" />
+      <workItem from="1535270982886" duration="2202000" />
+      <workItem from="1535525651280" duration="13513000" />
+      <workItem from="1536302171525" duration="1976000" />
+      <workItem from="1536379954713" duration="43000" />
+      <workItem from="1536387891757" duration="9405000" />
+      <workItem from="1536544130250" duration="4715000" />
+      <workItem from="1536568360085" duration="3581000" />
+      <workItem from="1536590654925" duration="3592000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95624000" />
+    <option name="totallyTimeSpent" value="134651000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -712,8 +627,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" weight="0.3296" />
@@ -727,19 +641,18 @@
       <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32919255" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.5698758" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.1744" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32763976" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.58229816" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4352" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32919255" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25067386" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28032345" />
       <window_info anchor="right" id="Bean Validation" order="8" />
       <window_info id="Web" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -747,6 +660,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3296" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -757,134 +671,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <option name="time" value="9" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/aspect/LogAspect.java" />
-    <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/intercepter/AuthIntercepter.java" />
-    <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/pojo/Log.java" />
-    <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/dao/UserDao.java" />
-    <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/mapper/TbUserMapper.java" />
-    <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/pojo/TbUserExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5236">
-          <caret line="176" selection-start-line="176" selection-end-line="176" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/utils/HttpContextUtils.java" />
-    <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/pojo/dto/MenuDto.java" />
-    <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/utils/R.java" />
-    <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/utils/StringUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agnes-server/src/main/java/top/zexus/server/AgnesServerApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="8" column="37" lean-forward="true" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agnes-server/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agnes-server/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agnes-common/src/main/resources/application.yml" />
-    <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/resources/mapper/TbUserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="10" column="34" lean-forward="true" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agnes-zuul/src/main/java/top/zexus/zuul/service/LoginService.java" />
-    <entry file="file://$PROJECT_DIR$/agnes-common/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1598">
-          <caret line="47" column="21" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/tomcat-jdbc/8.5.15/tomcat-jdbc-8.5.15.jar!/org/apache/tomcat/jdbc/pool/ConnectionPool.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="77" selection-start-line="77" selection-end-line="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agnes-zuul/src/main/java/top/zexus/zuul/controller/LoginController.java" />
-    <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/pojo/dto/LoginDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agnes-zuul/src/main/java/top/zexus/zuul/filter/AccessFilter.java" />
-    <entry file="file://$PROJECT_DIR$/agnes-zuul/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1802">
-          <caret line="53" column="44" selection-start-line="53" selection-start-column="44" selection-end-line="53" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agnes-zuul/src/main/java/top/zexus/zuul/AgnesZuulApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agnes-zuul/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/mapper/TbUserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agnes-parent/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2108">
-          <caret line="62" column="25" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/Dto/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/pojo/TbUser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -892,45 +682,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/service/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/pojo/AllGoodsResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#295#296#0" expanded="true" />
-            <element signature="e#323#324#0" expanded="true" />
-            <element signature="e#362#363#0" expanded="true" />
-            <element signature="e#396#397#0" expanded="true" />
-            <element signature="e#428#429#0" expanded="true" />
-            <element signature="e#455#456#0" expanded="true" />
-            <element signature="e#496#497#0" expanded="true" />
-            <element signature="e#528#529#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="26" column="44" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/Dto/DtoUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
           <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -969,84 +724,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/Dto/Goods.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-171">
-          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-          <folding>
-            <element signature="e#437#438#0" expanded="true" />
-            <element signature="e#469#470#0" expanded="true" />
-            <element signature="e#517#518#0" expanded="true" />
-            <element signature="e#559#560#0" expanded="true" />
-            <element signature="e#599#600#0" expanded="true" />
-            <element signature="e#631#632#0" expanded="true" />
-            <element signature="e#685#686#0" expanded="true" />
-            <element signature="e#727#728#0" expanded="true" />
-            <element signature="e#765#766#0" expanded="true" />
-            <element signature="e#799#800#0" expanded="true" />
-            <element signature="e#853#854#0" expanded="true" />
-            <element signature="e#899#900#0" expanded="true" />
-            <element signature="e#934#935#0" expanded="true" />
-            <element signature="e#965#966#0" expanded="true" />
-            <element signature="e#1013#1014#0" expanded="true" />
-            <element signature="e#1053#1054#0" expanded="true" />
-            <element signature="e#1095#1096#0" expanded="true" />
-            <element signature="e#1133#1134#0" expanded="true" />
-            <element signature="e#1195#1196#0" expanded="true" />
-            <element signature="e#1249#1250#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/controller/GoodsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/Dto/GoodsDetail.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
+        <state relative-caret-position="544">
           <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#422#423#0" expanded="true" />
-            <element signature="e#451#452#0" expanded="true" />
-            <element signature="e#495#496#0" expanded="true" />
-            <element signature="e#531#532#0" expanded="true" />
-            <element signature="e#464#465#0" expanded="true" />
-            <element signature="e#494#495#0" expanded="true" />
-            <element signature="e#538#539#0" expanded="true" />
-            <element signature="e#576#577#0" expanded="true" />
-            <element signature="e#612#613#0" expanded="true" />
-            <element signature="e#640#641#0" expanded="true" />
-            <element signature="e#686#687#0" expanded="true" />
-            <element signature="e#720#721#0" expanded="true" />
-            <element signature="e#752#753#0" expanded="true" />
-            <element signature="e#780#781#0" expanded="true" />
-            <element signature="e#822#823#0" expanded="true" />
-            <element signature="e#856#857#0" expanded="true" />
-            <element signature="e#894#895#0" expanded="true" />
-            <element signature="e#928#929#0" expanded="true" />
-            <element signature="e#982#983#0" expanded="true" />
-            <element signature="e#1028#1029#0" expanded="true" />
-            <element signature="e#1070#1071#0" expanded="true" />
-            <element signature="e#1108#1109#0" expanded="true" />
-            <element signature="e#1170#1171#0" expanded="true" />
-            <element signature="e#1224#1225#0" expanded="true" />
-            <element signature="e#1269#1270#0" expanded="true" />
-            <element signature="e#1309#1310#0" expanded="true" />
-            <element signature="e#1376#1377#0" expanded="true" />
-            <element signature="e#1434#1435#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/pojo/TbProductDetailExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
@@ -1057,20 +738,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/mapper/TbProductDetailMapper.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/mapper/TbProductDetailMapper.xml" />
     <entry file="file://$PROJECT_DIR$/agnes-common/src/main/resources/generatorConfig.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-39">
+        <state relative-caret-position="1326">
           <caret line="39" column="44" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -1085,40 +757,246 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/pojo/TbProductDetailExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/mapper/TbProductDetailMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="10" column="23" lean-forward="true" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/pojo/AllGoodsResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/AgnesCommonApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/Dto/Goods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/service/GoodsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1088">
+          <caret line="47" column="24" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/service/CartService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1734">
+          <caret line="51" column="9" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/utils/JwtUtiles.java" />
+    <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/utils/PageUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/utils/JedisClient.java" />
+    <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/resources/conf/resources.properties" />
+    <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/service/CartServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/utils/JedisConfig.java" />
+    <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/resources/conf/applicationContext-redis.xml" />
+    <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/utils/jedisClientCluster.java" />
+    <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/utils/JedisClientPool.java" />
+    <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/controller/CartController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/utils/StringUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/controller/GoodsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-34">
+          <caret line="18" column="30" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/pojo/UserToken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agnes-common/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2686">
+          <caret line="79" column="24" selection-start-line="79" selection-start-column="24" selection-end-line="79" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agnes-common/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="2" column="9" lean-forward="true" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agnes-manager/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="86" column="21" selection-start-line="86" selection-start-column="21" selection-end-line="86" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/Dto/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/Jedis/JedisPool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/Jedis/JedisClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/constants/CommonConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="11" column="56" lean-forward="true" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/jsonwebtoken/jjwt/0.7.0/jjwt-0.7.0.jar!/io/jsonwebtoken/JwtBuilder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="44" column="15" selection-start-line="44" selection-start-column="15" selection-end-line="44" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/Jedis/JedisConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="18" />
           <folding>
-            <element signature="e#1161#1162#0" expanded="true" />
-            <element signature="e#1189#1190#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/utils/JSONUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="64" column="25" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/hystrix/hystrix-core/1.5.12/hystrix-core-1.5.12.jar!/com/netflix/hystrix/HystrixCommand.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="104" selection-start-line="104" selection-end-line="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="6" column="13" lean-forward="true" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/utils/JwtUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="40" column="29" lean-forward="true" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/utils/Result.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="25" column="9" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+        <state relative-caret-position="96">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
           <folding>
+            <element signature="e#610#611#0" expanded="true" />
+            <element signature="e#648#649#0" expanded="true" />
             <element signature="e#1163#1164#0" expanded="true" />
             <element signature="e#1198#1199#0" expanded="true" />
+            <element signature="e#1408#1409#0" expanded="true" />
+            <element signature="e#1459#1460#0" expanded="true" />
+            <element signature="e#1504#1505#0" expanded="true" />
+            <element signature="e#1555#1556#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/agnes-manager/pom.xml">
+    <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="81" column="40" selection-start-line="81" selection-start-column="40" selection-end-line="81" selection-end-column="40" />
+        <state relative-caret-position="206">
+          <caret line="36" column="20" lean-forward="true" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/service/GoodsServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/pojo/dto/LoginDto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="24" column="8" lean-forward="true" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
-          <folding>
-            <element signature="method#getAllGoods#0;class#GoodsServiceImpl#0" />
-            <element signature="e#1032#1039#0" expanded="true" />
-            <element signature="e#1612#1623#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-8">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/service/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="115" column="46" lean-forward="true" selection-start-line="115" selection-start-column="46" selection-end-line="115" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="42" column="45" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -1174,7 +1052,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>agnes-common</last-edited>
+          <last-edited>agnes-manager</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

@@ -8,11 +8,20 @@ import java.io.Serializable;
  * @Date: Created in 15:43 2018/7/30
  */
 public class User implements Serializable {
-    private Integer id;
+    private int id;
     private String username;
     private String phone;
     private String sex;
     private int state;
+    private String token;
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
 
     public int getState() {
         return state;

@@ -1,0 +1,15 @@
+#redis jedis配置
+#spring:
+#  redis:
+#    database: 0
+#    port: 6379
+#    host: 10.100.140.84
+#    password:
+#    pool:
+#      max-active: 8
+#      max-wait: -1
+#      max-idle: 8
+#      min-idle: 0
+#    timeout: 0
+#  session:
+#    store-type: none

@@ -2,12 +2,10 @@ package top.zexus.manager.controller;
 
 
 
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import top.zexus.common.pojo.dto.LoginDto;
 import top.zexus.common.utils.Result;
+import top.zexus.manager.Jedis.JedisClient;
 import top.zexus.manager.service.UserService;
 
 import javax.annotation.Resource;
@@ -23,6 +21,8 @@ import javax.servlet.http.HttpServletRequest;
 public class UserController {
     @Resource
     private UserService userService;
+    @Resource
+    private JedisClient jedisClient;
 
     @RequestMapping(value = "/login",method = RequestMethod.POST)
     public Result login(@RequestBody LoginDto loginDto, HttpServletRequest request){
@@ -31,4 +31,17 @@ public class UserController {
 //       System.out.println(loginDto.getPassword());
        return result;
     }
+
+    @RequestMapping(value = "/checkLogin",method = RequestMethod.GET)
+    public Result checkLogin(@RequestParam(defaultValue = "") String token){
+        Result result = userService.getUserByToken(token);
+        return result;
+    }
+
+    @RequestMapping(value = "/register",method = RequestMethod.POST)
+    public Result register(@RequestBody LoginDto loginDto){
+        Result result = userService.register(loginDto.getUsername(),loginDto.getPassword());
+        return result;
+    }
+
 }

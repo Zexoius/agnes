@@ -16,4 +16,27 @@ public interface UserService {
      * @return
      */
     Result userLogin(String username, String password);
+
+    /**
+     * 检测token
+     * @param token
+     * @return
+     */
+    Result getUserByToken(String token);
+
+    /**
+     * 注册
+     * @param username
+     * @param password
+     * @return
+     */
+    Result register(String username,String password);
+
+    /**
+     * 检测数据
+     * @param params
+     * @param type
+     * @return
+     */
+    boolean checkData(String params,int type);
 }

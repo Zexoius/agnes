@@ -3,10 +3,11 @@
 <mapper namespace="top.zexus.common.mapper.TbProductMapper" >
   <resultMap id="BaseResultMap" type="top.zexus.common.pojo.TbProduct" >
     <id column="id" property="id" jdbcType="BIGINT" />
-    <result column="desciption" property="desciption" jdbcType="VARCHAR" />
     <result column="title" property="title" jdbcType="VARCHAR" />
+    <result column="sell_point" property="sellPoint" jdbcType="VARCHAR" />
     <result column="price" property="price" jdbcType="DECIMAL" />
     <result column="num" property="num" jdbcType="INTEGER" />
+    <result column="limit_num" property="limitNum" jdbcType="INTEGER" />
     <result column="image" property="image" jdbcType="VARCHAR" />
     <result column="cid" property="cid" jdbcType="BIGINT" />
     <result column="status" property="status" jdbcType="INTEGER" />
@@ -72,7 +73,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, desciption, title, price, num, image, cid, status, created, updated
+    id, title, sell_point, price, num, limit_num, image, cid, status, created, updated
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="top.zexus.common.pojo.TbProductExample" >
     select
@@ -105,14 +106,14 @@
     </if>
   </delete>
   <insert id="insert" parameterType="top.zexus.common.pojo.TbProduct" >
-    insert into tb_product (id, desciption, title, 
-      price, num, image, 
-      cid, status, created, 
-      updated)
-    values (#{id,jdbcType=BIGINT}, #{desciption,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, 
-      #{price,jdbcType=DECIMAL}, #{num,jdbcType=INTEGER}, #{image,jdbcType=VARCHAR}, 
-      #{cid,jdbcType=BIGINT}, #{status,jdbcType=INTEGER}, #{created,jdbcType=TIMESTAMP}, 
-      #{updated,jdbcType=TIMESTAMP})
+    insert into tb_product (id, title, sell_point, 
+      price, num, limit_num, 
+      image, cid, status, 
+      created, updated)
+    values (#{id,jdbcType=BIGINT}, #{title,jdbcType=VARCHAR}, #{sellPoint,jdbcType=VARCHAR}, 
+      #{price,jdbcType=DECIMAL}, #{num,jdbcType=INTEGER}, #{limitNum,jdbcType=INTEGER}, 
+      #{image,jdbcType=VARCHAR}, #{cid,jdbcType=BIGINT}, #{status,jdbcType=INTEGER}, 
+      #{created,jdbcType=TIMESTAMP}, #{updated,jdbcType=TIMESTAMP})
   </insert>
   <insert id="insertSelective" parameterType="top.zexus.common.pojo.TbProduct" >
     insert into tb_product
@@ -120,17 +121,20 @@
       <if test="id != null" >
         id,
       </if>
-      <if test="desciption != null" >
-        desciption,
-      </if>
       <if test="title != null" >
         title,
+      </if>
+      <if test="sellPoint != null" >
+        sell_point,
       </if>
       <if test="price != null" >
         price,
       </if>
       <if test="num != null" >
         num,
+      </if>
+      <if test="limitNum != null" >
+        limit_num,
       </if>
       <if test="image != null" >
         image,
@@ -152,17 +156,20 @@
       <if test="id != null" >
         #{id,jdbcType=BIGINT},
       </if>
-      <if test="desciption != null" >
-        #{desciption,jdbcType=VARCHAR},
-      </if>
       <if test="title != null" >
         #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="sellPoint != null" >
+        #{sellPoint,jdbcType=VARCHAR},
       </if>
       <if test="price != null" >
         #{price,jdbcType=DECIMAL},
       </if>
       <if test="num != null" >
         #{num,jdbcType=INTEGER},
+      </if>
+      <if test="limitNum != null" >
+        #{limitNum,jdbcType=INTEGER},
       </if>
       <if test="image != null" >
         #{image,jdbcType=VARCHAR},
@@ -193,17 +200,20 @@
       <if test="record.id != null" >
         id = #{record.id,jdbcType=BIGINT},
       </if>
-      <if test="record.desciption != null" >
-        desciption = #{record.desciption,jdbcType=VARCHAR},
-      </if>
       <if test="record.title != null" >
         title = #{record.title,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sellPoint != null" >
+        sell_point = #{record.sellPoint,jdbcType=VARCHAR},
       </if>
       <if test="record.price != null" >
         price = #{record.price,jdbcType=DECIMAL},
       </if>
       <if test="record.num != null" >
         num = #{record.num,jdbcType=INTEGER},
+      </if>
+      <if test="record.limitNum != null" >
+        limit_num = #{record.limitNum,jdbcType=INTEGER},
       </if>
       <if test="record.image != null" >
         image = #{record.image,jdbcType=VARCHAR},
@@ -228,10 +238,11 @@
   <update id="updateByExample" parameterType="map" >
     update tb_product
     set id = #{record.id,jdbcType=BIGINT},
-      desciption = #{record.desciption,jdbcType=VARCHAR},
       title = #{record.title,jdbcType=VARCHAR},
+      sell_point = #{record.sellPoint,jdbcType=VARCHAR},
       price = #{record.price,jdbcType=DECIMAL},
       num = #{record.num,jdbcType=INTEGER},
+      limit_num = #{record.limitNum,jdbcType=INTEGER},
       image = #{record.image,jdbcType=VARCHAR},
       cid = #{record.cid,jdbcType=BIGINT},
       status = #{record.status,jdbcType=INTEGER},
@@ -244,17 +255,20 @@
   <update id="updateByPrimaryKeySelective" parameterType="top.zexus.common.pojo.TbProduct" >
     update tb_product
     <set >
-      <if test="desciption != null" >
-        desciption = #{desciption,jdbcType=VARCHAR},
-      </if>
       <if test="title != null" >
         title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="sellPoint != null" >
+        sell_point = #{sellPoint,jdbcType=VARCHAR},
       </if>
       <if test="price != null" >
         price = #{price,jdbcType=DECIMAL},
       </if>
       <if test="num != null" >
         num = #{num,jdbcType=INTEGER},
+      </if>
+      <if test="limitNum != null" >
+        limit_num = #{limitNum,jdbcType=INTEGER},
       </if>
       <if test="image != null" >
         image = #{image,jdbcType=VARCHAR},
@@ -276,10 +290,11 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="top.zexus.common.pojo.TbProduct" >
     update tb_product
-    set desciption = #{desciption,jdbcType=VARCHAR},
-      title = #{title,jdbcType=VARCHAR},
+    set title = #{title,jdbcType=VARCHAR},
+      sell_point = #{sellPoint,jdbcType=VARCHAR},
       price = #{price,jdbcType=DECIMAL},
       num = #{num,jdbcType=INTEGER},
+      limit_num = #{limitNum,jdbcType=INTEGER},
       image = #{image,jdbcType=VARCHAR},
       cid = #{cid,jdbcType=BIGINT},
       status = #{status,jdbcType=INTEGER},
@@ -287,18 +302,4 @@
       updated = #{updated,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=BIGINT}
   </update>
-
-  <select id="selectGoodsFront" resultMap="BaseResultMap">
-    SELECT * FROM tb_product
-    WHERE status = 1
-    <if test="priceGt != null and priceGt >= 0 and priceLt != null and priceLt >= 0">
-      AND price BETWEEN #{priceGt} AND #{priceLt}
-    </if>
-    <if test="cid != null">
-      AND cid = #{cid}
-    </if>
-    ORDER BY
-    ${orderCol}
-    ${orderDir}
-  </select>
 </mapper>

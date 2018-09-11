@@ -1,7 +1,8 @@
-package top.zexus.manager.service;
+package top.zexus.manager.service.impl;
 
 import org.springframework.stereotype.Service;
 import top.zexus.common.utils.Result;
+import top.zexus.manager.service.CartService;
 
 /**
  * @Author: Zexus
@@ -9,7 +10,7 @@ import top.zexus.common.utils.Result;
  * @Date: Created in 16:21 2018/8/26
  */
 @Service
-public class CartServiceImpl implements CartService{
+public class CartServiceImpl implements CartService {
     @Override
     public Result addCart(long userId, long goodsId, int num) {
         return null;

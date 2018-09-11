@@ -39,4 +39,6 @@ public interface UserService {
      * @return
      */
     boolean checkData(String params,int type);
+
+    String tesRedis();
 }

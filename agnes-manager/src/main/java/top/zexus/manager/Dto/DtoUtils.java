@@ -23,7 +23,7 @@ public class DtoUtils {
         Goods goods = new Goods();
 
         goods.setProductId(tbProduct.getId());
-        goods.setSubTitle(tbProduct.getDesciption());
+        goods.setSubTitle(tbProduct.getSellPoint());
         goods.setProductName(tbProduct.getTitle());
         goods.setSalePrice(tbProduct.getPrice());
         goods.setProductImageBig(tbProduct.getImage());

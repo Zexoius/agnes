@@ -6,13 +6,15 @@ import java.util.Date;
 public class TbProduct {
     private Long id;
 
-    private String desciption;
-
     private String title;
+
+    private String sellPoint;
 
     private BigDecimal price;
 
     private Integer num;
+
+    private Integer limitNum;
 
     private String image;
 
@@ -32,20 +34,20 @@ public class TbProduct {
         this.id = id;
     }
 
-    public String getDesciption() {
-        return desciption;
-    }
-
-    public void setDesciption(String desciption) {
-        this.desciption = desciption == null ? null : desciption.trim();
-    }
-
     public String getTitle() {
         return title;
     }
 
     public void setTitle(String title) {
         this.title = title == null ? null : title.trim();
+    }
+
+    public String getSellPoint() {
+        return sellPoint;
+    }
+
+    public void setSellPoint(String sellPoint) {
+        this.sellPoint = sellPoint == null ? null : sellPoint.trim();
     }
 
     public BigDecimal getPrice() {
@@ -62,6 +64,14 @@ public class TbProduct {
 
     public void setNum(Integer num) {
         this.num = num;
+    }
+
+    public Integer getLimitNum() {
+        return limitNum;
+    }
+
+    public void setLimitNum(Integer limitNum) {
+        this.limitNum = limitNum;
     }
 
     public String getImage() {

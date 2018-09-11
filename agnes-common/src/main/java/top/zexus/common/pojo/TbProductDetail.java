@@ -3,20 +3,20 @@ package top.zexus.common.pojo;
 import java.util.Date;
 
 public class TbProductDetail {
-    private Long goodsId;
+    private Long itemId;
 
     private Date created;
 
     private Date updated;
 
-    private String goodsDetail;
+    private String itemDesc;
 
-    public Long getGoodsId() {
-        return goodsId;
+    public Long getItemId() {
+        return itemId;
     }
 
-    public void setGoodsId(Long goodsId) {
-        this.goodsId = goodsId;
+    public void setItemId(Long itemId) {
+        this.itemId = itemId;
     }
 
     public Date getCreated() {
@@ -35,11 +35,11 @@ public class TbProductDetail {
         this.updated = updated;
     }
 
-    public String getGoodsDetail() {
-        return goodsDetail;
+    public String getItemDesc() {
+        return itemDesc;
     }
 
-    public void setGoodsDetail(String goodsDetail) {
-        this.goodsDetail = goodsDetail == null ? null : goodsDetail.trim();
+    public void setItemDesc(String itemDesc) {
+        this.itemDesc = itemDesc == null ? null : itemDesc.trim();
     }
 }

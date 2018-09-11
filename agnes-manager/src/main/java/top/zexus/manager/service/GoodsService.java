@@ -27,4 +27,10 @@ public interface GoodsService {
      * @return
      */
     Result goodsDetail(Long goodsId);
+
+    /**
+     * 获取首页内容
+     * @return
+     */
+    Result getHome();
 }

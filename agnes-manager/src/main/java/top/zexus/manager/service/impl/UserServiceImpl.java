@@ -1,24 +1,19 @@
-package top.zexus.manager.service;
+package top.zexus.manager.service.impl;
 
-import ch.qos.logback.core.net.SyslogOutputStream;
-import com.alibaba.fastjson.JSON;
 import com.google.gson.Gson;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.util.DigestUtils;
 import top.zexus.common.mapper.TbUserMapper;
 import top.zexus.common.pojo.TbUser;
 import top.zexus.common.pojo.TbUserExample;
 import top.zexus.common.pojo.UserToken;
-import top.zexus.common.utils.JSONUtils;
 import top.zexus.common.utils.JwtUtils;
 import top.zexus.common.utils.Result;
 import top.zexus.manager.Dto.DtoUtils;
 import top.zexus.manager.Dto.User;
-import top.zexus.manager.Jedis.JedisClient;
+import top.zexus.manager.Jedis.RedisClient;
+import top.zexus.manager.service.UserService;
 
 import javax.annotation.Resource;
-import javax.management.DescriptorAccess;
 import java.util.List;
 
 /**
@@ -31,7 +26,8 @@ public class UserServiceImpl implements UserService {
     @Resource
     private TbUserMapper tbUserMapper;
     @Resource
-    private JedisClient jedisClient;
+    private RedisClient redisClient;
+    private int SESSION_EXPIRE = 1800;
 
     @Override
     public Result userLogin(String username, String password) {
@@ -65,9 +61,9 @@ public class UserServiceImpl implements UserService {
         }
         user.setToken(token);
         user.setState(1);
-        // 用户信息写入redis：key："SESSION:token" value："user"
-//        jedisClient.set("SESSION:" + token, new Gson().toJson(user));
-//        jedisClient.expire("SESSION:" + token, SESSION_EXPIRE);
+        // 用户信息写入 redis：key："SESSION:token" value："user"
+        redisClient.set("SESSION:" + token, new Gson().toJson(user));
+        redisClient.expire("SESSION:" + token, SESSION_EXPIRE);
         return Result.ok("登录成功")
                 .put("user", user);
 //                .put("token",token);
@@ -75,13 +71,14 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Result getUserByToken(String token) {
-        String json = "";
-        try {
-            json = JwtUtils.getInfoFromToken(token);
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-        System.out.println(json);
+//        String json = "";
+//        try {
+//            json = JwtUtils.getInfoFromToken(token);
+//        }catch (Exception e){
+//            e.printStackTrace();
+//        }
+//        System.out.println(json);
+        String json = redisClient.get("SESSION:" + token);
         if (json == null){
             User user = new User();
             user.setState(0);
@@ -89,12 +86,14 @@ public class UserServiceImpl implements UserService {
             return Result.error("未登录")
                     .put("user",user);
         }
+//        User user = new Gson().fromJson(json,User.class);
+//        if (user == null){
+//            return Result.error("用户信息不存在");
+//        }
+        redisClient.expire("SESSION:" + token,SESSION_EXPIRE);
         User user = new Gson().fromJson(json,User.class);
-        if (user == null){
-            return Result.error("用户信息不存在");
-        }
         return Result.ok("已登陆")
-//                .put("user",user)
+                .put("user",user)
                 .put("token",token);
     }
 
@@ -137,5 +136,15 @@ public class UserServiceImpl implements UserService {
             return false;
         }
         return true;
+    }
+
+    @Override
+    public String tesRedis() {
+        String key = "user";
+        String value = "zexus";
+        redisClient.set(key,value);
+        String result = redisClient.get(key);
+        String json = new Gson().toJson(result);
+        return json;
     }
 }

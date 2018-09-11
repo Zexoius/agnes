@@ -8,6 +8,7 @@ import top.zexus.common.utils.Result;
 import top.zexus.manager.service.GoodsService;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * @Author: Zexus
@@ -34,6 +35,12 @@ public class GoodsController {
                               @RequestParam(defaultValue = "-1") int priceGt,
                               @RequestParam(defaultValue = "-1") int priceLt) {
         Result result = goodsService.getAllGoods(page, size, sort, cid, priceGt, priceLt);
+        return result;
+    }
+
+    @RequestMapping(value = "/home",method = RequestMethod.GET)
+    public Result getGoodsHome(){
+        Result result = goodsService.getHome();
         return result;
     }
 }

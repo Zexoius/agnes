@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="top.zexus.common.mapper.TbProductMapper" >
-  <resultMap id="BaseResultMap" type="top.zexus.common.pojo.TbProduct" >
-    <id column="id" property="id" jdbcType="BIGINT" />
-    <result column="title" property="title" jdbcType="VARCHAR" />
-    <result column="sell_point" property="sellPoint" jdbcType="VARCHAR" />
-    <result column="price" property="price" jdbcType="DECIMAL" />
-    <result column="num" property="num" jdbcType="INTEGER" />
+<mapper namespace="top.zexus.common.mapper.TbPanelMapper" >
+  <resultMap id="BaseResultMap" type="top.zexus.common.pojo.TbPanel" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="type" property="type" jdbcType="INTEGER" />
+    <result column="sort_order" property="sortOrder" jdbcType="INTEGER" />
+    <result column="position" property="position" jdbcType="INTEGER" />
     <result column="limit_num" property="limitNum" jdbcType="INTEGER" />
-    <result column="image" property="image" jdbcType="VARCHAR" />
-    <result column="cid" property="cid" jdbcType="BIGINT" />
     <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
     <result column="created" property="created" jdbcType="TIMESTAMP" />
     <result column="updated" property="updated" jdbcType="TIMESTAMP" />
   </resultMap>
@@ -73,15 +72,15 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, title, sell_point, price, num, limit_num, image, cid, status, created, updated
+    id, name, type, sort_order, position, limit_num, status, remark, created, updated
   </sql>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="top.zexus.common.pojo.TbProductExample" >
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="top.zexus.common.pojo.TbPanelExample" >
     select
     <if test="distinct" >
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from tb_product
+    from tb_panel
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
@@ -89,61 +88,58 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />
-    from tb_product
-    where id = #{id,jdbcType=BIGINT}
+    from tb_panel
+    where id = #{id,jdbcType=INTEGER}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
-    delete from tb_product
-    where id = #{id,jdbcType=BIGINT}
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from tb_panel
+    where id = #{id,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="top.zexus.common.pojo.TbProductExample" >
-    delete from tb_product
+  <delete id="deleteByExample" parameterType="top.zexus.common.pojo.TbPanelExample" >
+    delete from tb_panel
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="top.zexus.common.pojo.TbProduct" >
-    insert into tb_product (id, title, sell_point, 
-      price, num, limit_num, 
-      image, cid, status, 
-      created, updated)
-    values (#{id,jdbcType=BIGINT}, #{title,jdbcType=VARCHAR}, #{sellPoint,jdbcType=VARCHAR}, 
-      #{price,jdbcType=DECIMAL}, #{num,jdbcType=INTEGER}, #{limitNum,jdbcType=INTEGER}, 
-      #{image,jdbcType=VARCHAR}, #{cid,jdbcType=BIGINT}, #{status,jdbcType=INTEGER}, 
-      #{created,jdbcType=TIMESTAMP}, #{updated,jdbcType=TIMESTAMP})
+  <insert id="insert" parameterType="top.zexus.common.pojo.TbPanel" >
+    insert into tb_panel (id, name, type, 
+      sort_order, position, limit_num, 
+      status, remark, created, 
+      updated)
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{type,jdbcType=INTEGER}, 
+      #{sortOrder,jdbcType=INTEGER}, #{position,jdbcType=INTEGER}, #{limitNum,jdbcType=INTEGER}, 
+      #{status,jdbcType=INTEGER}, #{remark,jdbcType=VARCHAR}, #{created,jdbcType=TIMESTAMP}, 
+      #{updated,jdbcType=TIMESTAMP})
   </insert>
-  <insert id="insertSelective" parameterType="top.zexus.common.pojo.TbProduct" >
-    insert into tb_product
+  <insert id="insertSelective" parameterType="top.zexus.common.pojo.TbPanel" >
+    insert into tb_panel
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
         id,
       </if>
-      <if test="title != null" >
-        title,
+      <if test="name != null" >
+        name,
       </if>
-      <if test="sellPoint != null" >
-        sell_point,
+      <if test="type != null" >
+        type,
       </if>
-      <if test="price != null" >
-        price,
+      <if test="sortOrder != null" >
+        sort_order,
       </if>
-      <if test="num != null" >
-        num,
+      <if test="position != null" >
+        position,
       </if>
       <if test="limitNum != null" >
         limit_num,
       </if>
-      <if test="image != null" >
-        image,
-      </if>
-      <if test="cid != null" >
-        cid,
-      </if>
       <if test="status != null" >
         status,
+      </if>
+      <if test="remark != null" >
+        remark,
       </if>
       <if test="created != null" >
         created,
@@ -154,31 +150,28 @@
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="id != null" >
-        #{id,jdbcType=BIGINT},
+        #{id,jdbcType=INTEGER},
       </if>
-      <if test="title != null" >
-        #{title,jdbcType=VARCHAR},
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
       </if>
-      <if test="sellPoint != null" >
-        #{sellPoint,jdbcType=VARCHAR},
+      <if test="type != null" >
+        #{type,jdbcType=INTEGER},
       </if>
-      <if test="price != null" >
-        #{price,jdbcType=DECIMAL},
+      <if test="sortOrder != null" >
+        #{sortOrder,jdbcType=INTEGER},
       </if>
-      <if test="num != null" >
-        #{num,jdbcType=INTEGER},
+      <if test="position != null" >
+        #{position,jdbcType=INTEGER},
       </if>
       <if test="limitNum != null" >
         #{limitNum,jdbcType=INTEGER},
       </if>
-      <if test="image != null" >
-        #{image,jdbcType=VARCHAR},
-      </if>
-      <if test="cid != null" >
-        #{cid,jdbcType=BIGINT},
-      </if>
       <if test="status != null" >
         #{status,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
       </if>
       <if test="created != null" >
         #{created,jdbcType=TIMESTAMP},
@@ -188,41 +181,38 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="top.zexus.common.pojo.TbProductExample" resultType="java.lang.Integer" >
-    select count(*) from tb_product
+  <select id="countByExample" parameterType="top.zexus.common.pojo.TbPanelExample" resultType="java.lang.Integer" >
+    select count(*) from tb_panel
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map" >
-    update tb_product
+    update tb_panel
     <set >
       <if test="record.id != null" >
-        id = #{record.id,jdbcType=BIGINT},
+        id = #{record.id,jdbcType=INTEGER},
       </if>
-      <if test="record.title != null" >
-        title = #{record.title,jdbcType=VARCHAR},
+      <if test="record.name != null" >
+        name = #{record.name,jdbcType=VARCHAR},
       </if>
-      <if test="record.sellPoint != null" >
-        sell_point = #{record.sellPoint,jdbcType=VARCHAR},
+      <if test="record.type != null" >
+        type = #{record.type,jdbcType=INTEGER},
       </if>
-      <if test="record.price != null" >
-        price = #{record.price,jdbcType=DECIMAL},
+      <if test="record.sortOrder != null" >
+        sort_order = #{record.sortOrder,jdbcType=INTEGER},
       </if>
-      <if test="record.num != null" >
-        num = #{record.num,jdbcType=INTEGER},
+      <if test="record.position != null" >
+        position = #{record.position,jdbcType=INTEGER},
       </if>
       <if test="record.limitNum != null" >
         limit_num = #{record.limitNum,jdbcType=INTEGER},
       </if>
-      <if test="record.image != null" >
-        image = #{record.image,jdbcType=VARCHAR},
-      </if>
-      <if test="record.cid != null" >
-        cid = #{record.cid,jdbcType=BIGINT},
-      </if>
       <if test="record.status != null" >
         status = #{record.status,jdbcType=INTEGER},
+      </if>
+      <if test="record.remark != null" >
+        remark = #{record.remark,jdbcType=VARCHAR},
       </if>
       <if test="record.created != null" >
         created = #{record.created,jdbcType=TIMESTAMP},
@@ -236,48 +226,44 @@
     </if>
   </update>
   <update id="updateByExample" parameterType="map" >
-    update tb_product
-    set id = #{record.id,jdbcType=BIGINT},
-      title = #{record.title,jdbcType=VARCHAR},
-      sell_point = #{record.sellPoint,jdbcType=VARCHAR},
-      price = #{record.price,jdbcType=DECIMAL},
-      num = #{record.num,jdbcType=INTEGER},
+    update tb_panel
+    set id = #{record.id,jdbcType=INTEGER},
+      name = #{record.name,jdbcType=VARCHAR},
+      type = #{record.type,jdbcType=INTEGER},
+      sort_order = #{record.sortOrder,jdbcType=INTEGER},
+      position = #{record.position,jdbcType=INTEGER},
       limit_num = #{record.limitNum,jdbcType=INTEGER},
-      image = #{record.image,jdbcType=VARCHAR},
-      cid = #{record.cid,jdbcType=BIGINT},
       status = #{record.status,jdbcType=INTEGER},
+      remark = #{record.remark,jdbcType=VARCHAR},
       created = #{record.created,jdbcType=TIMESTAMP},
       updated = #{record.updated,jdbcType=TIMESTAMP}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="top.zexus.common.pojo.TbProduct" >
-    update tb_product
+  <update id="updateByPrimaryKeySelective" parameterType="top.zexus.common.pojo.TbPanel" >
+    update tb_panel
     <set >
-      <if test="title != null" >
-        title = #{title,jdbcType=VARCHAR},
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
       </if>
-      <if test="sellPoint != null" >
-        sell_point = #{sellPoint,jdbcType=VARCHAR},
+      <if test="type != null" >
+        type = #{type,jdbcType=INTEGER},
       </if>
-      <if test="price != null" >
-        price = #{price,jdbcType=DECIMAL},
+      <if test="sortOrder != null" >
+        sort_order = #{sortOrder,jdbcType=INTEGER},
       </if>
-      <if test="num != null" >
-        num = #{num,jdbcType=INTEGER},
+      <if test="position != null" >
+        position = #{position,jdbcType=INTEGER},
       </if>
       <if test="limitNum != null" >
         limit_num = #{limitNum,jdbcType=INTEGER},
       </if>
-      <if test="image != null" >
-        image = #{image,jdbcType=VARCHAR},
-      </if>
-      <if test="cid != null" >
-        cid = #{cid,jdbcType=BIGINT},
-      </if>
       <if test="status != null" >
         status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
       </if>
       <if test="created != null" >
         created = #{created,jdbcType=TIMESTAMP},
@@ -286,20 +272,19 @@
         updated = #{updated,jdbcType=TIMESTAMP},
       </if>
     </set>
-    where id = #{id,jdbcType=BIGINT}
+    where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="top.zexus.common.pojo.TbProduct" >
-    update tb_product
-    set title = #{title,jdbcType=VARCHAR},
-      sell_point = #{sellPoint,jdbcType=VARCHAR},
-      price = #{price,jdbcType=DECIMAL},
-      num = #{num,jdbcType=INTEGER},
+  <update id="updateByPrimaryKey" parameterType="top.zexus.common.pojo.TbPanel" >
+    update tb_panel
+    set name = #{name,jdbcType=VARCHAR},
+      type = #{type,jdbcType=INTEGER},
+      sort_order = #{sortOrder,jdbcType=INTEGER},
+      position = #{position,jdbcType=INTEGER},
       limit_num = #{limitNum,jdbcType=INTEGER},
-      image = #{image,jdbcType=VARCHAR},
-      cid = #{cid,jdbcType=BIGINT},
       status = #{status,jdbcType=INTEGER},
+      remark = #{remark,jdbcType=VARCHAR},
       created = #{created,jdbcType=TIMESTAMP},
       updated = #{updated,jdbcType=TIMESTAMP}
-    where id = #{id,jdbcType=BIGINT}
+    where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

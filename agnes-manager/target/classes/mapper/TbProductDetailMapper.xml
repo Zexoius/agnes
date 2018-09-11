@@ -2,12 +2,12 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="top.zexus.common.mapper.TbProductDetailMapper" >
   <resultMap id="BaseResultMap" type="top.zexus.common.pojo.TbProductDetail" >
-    <id column="goods_id" property="goodsId" jdbcType="BIGINT" />
+    <id column="item_id" property="itemId" jdbcType="BIGINT" />
     <result column="created" property="created" jdbcType="TIMESTAMP" />
     <result column="updated" property="updated" jdbcType="TIMESTAMP" />
   </resultMap>
   <resultMap id="ResultMapWithBLOBs" type="top.zexus.common.pojo.TbProductDetail" extends="BaseResultMap" >
-    <result column="goods_detail" property="goodsDetail" jdbcType="LONGVARCHAR" />
+    <result column="item_desc" property="itemDesc" jdbcType="LONGVARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -68,10 +68,10 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    goods_id, created, updated
+    item_id, created, updated
   </sql>
   <sql id="Blob_Column_List" >
-    goods_detail
+    item_desc
   </sql>
   <select id="selectByExampleWithBLOBs" resultMap="ResultMapWithBLOBs" parameterType="top.zexus.common.pojo.TbProductDetailExample" >
     select
@@ -109,11 +109,11 @@
     ,
     <include refid="Blob_Column_List" />
     from tb_product_detail
-    where goods_id = #{goodsId,jdbcType=BIGINT}
+    where item_id = #{itemId,jdbcType=BIGINT}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
     delete from tb_product_detail
-    where goods_id = #{goodsId,jdbcType=BIGINT}
+    where item_id = #{itemId,jdbcType=BIGINT}
   </delete>
   <delete id="deleteByExample" parameterType="top.zexus.common.pojo.TbProductDetailExample" >
     delete from tb_product_detail
@@ -122,16 +122,16 @@
     </if>
   </delete>
   <insert id="insert" parameterType="top.zexus.common.pojo.TbProductDetail" >
-    insert into tb_product_detail (goods_id, created, updated, 
-      goods_detail)
-    values (#{goodsId,jdbcType=BIGINT}, #{created,jdbcType=TIMESTAMP}, #{updated,jdbcType=TIMESTAMP}, 
-      #{goodsDetail,jdbcType=LONGVARCHAR})
+    insert into tb_product_detail (item_id, created, updated, 
+      item_desc)
+    values (#{itemId,jdbcType=BIGINT}, #{created,jdbcType=TIMESTAMP}, #{updated,jdbcType=TIMESTAMP}, 
+      #{itemDesc,jdbcType=LONGVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="top.zexus.common.pojo.TbProductDetail" >
     insert into tb_product_detail
     <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="goodsId != null" >
-        goods_id,
+      <if test="itemId != null" >
+        item_id,
       </if>
       <if test="created != null" >
         created,
@@ -139,13 +139,13 @@
       <if test="updated != null" >
         updated,
       </if>
-      <if test="goodsDetail != null" >
-        goods_detail,
+      <if test="itemDesc != null" >
+        item_desc,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="goodsId != null" >
-        #{goodsId,jdbcType=BIGINT},
+      <if test="itemId != null" >
+        #{itemId,jdbcType=BIGINT},
       </if>
       <if test="created != null" >
         #{created,jdbcType=TIMESTAMP},
@@ -153,8 +153,8 @@
       <if test="updated != null" >
         #{updated,jdbcType=TIMESTAMP},
       </if>
-      <if test="goodsDetail != null" >
-        #{goodsDetail,jdbcType=LONGVARCHAR},
+      <if test="itemDesc != null" >
+        #{itemDesc,jdbcType=LONGVARCHAR},
       </if>
     </trim>
   </insert>
@@ -167,8 +167,8 @@
   <update id="updateByExampleSelective" parameterType="map" >
     update tb_product_detail
     <set >
-      <if test="record.goodsId != null" >
-        goods_id = #{record.goodsId,jdbcType=BIGINT},
+      <if test="record.itemId != null" >
+        item_id = #{record.itemId,jdbcType=BIGINT},
       </if>
       <if test="record.created != null" >
         created = #{record.created,jdbcType=TIMESTAMP},
@@ -176,8 +176,8 @@
       <if test="record.updated != null" >
         updated = #{record.updated,jdbcType=TIMESTAMP},
       </if>
-      <if test="record.goodsDetail != null" >
-        goods_detail = #{record.goodsDetail,jdbcType=LONGVARCHAR},
+      <if test="record.itemDesc != null" >
+        item_desc = #{record.itemDesc,jdbcType=LONGVARCHAR},
       </if>
     </set>
     <if test="_parameter != null" >
@@ -186,17 +186,17 @@
   </update>
   <update id="updateByExampleWithBLOBs" parameterType="map" >
     update tb_product_detail
-    set goods_id = #{record.goodsId,jdbcType=BIGINT},
+    set item_id = #{record.itemId,jdbcType=BIGINT},
       created = #{record.created,jdbcType=TIMESTAMP},
       updated = #{record.updated,jdbcType=TIMESTAMP},
-      goods_detail = #{record.goodsDetail,jdbcType=LONGVARCHAR}
+      item_desc = #{record.itemDesc,jdbcType=LONGVARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
   <update id="updateByExample" parameterType="map" >
     update tb_product_detail
-    set goods_id = #{record.goodsId,jdbcType=BIGINT},
+    set item_id = #{record.itemId,jdbcType=BIGINT},
       created = #{record.created,jdbcType=TIMESTAMP},
       updated = #{record.updated,jdbcType=TIMESTAMP}
     <if test="_parameter != null" >
@@ -212,23 +212,23 @@
       <if test="updated != null" >
         updated = #{updated,jdbcType=TIMESTAMP},
       </if>
-      <if test="goodsDetail != null" >
-        goods_detail = #{goodsDetail,jdbcType=LONGVARCHAR},
+      <if test="itemDesc != null" >
+        item_desc = #{itemDesc,jdbcType=LONGVARCHAR},
       </if>
     </set>
-    where goods_id = #{goodsId,jdbcType=BIGINT}
+    where item_id = #{itemId,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKeyWithBLOBs" parameterType="top.zexus.common.pojo.TbProductDetail" >
     update tb_product_detail
     set created = #{created,jdbcType=TIMESTAMP},
       updated = #{updated,jdbcType=TIMESTAMP},
-      goods_detail = #{goodsDetail,jdbcType=LONGVARCHAR}
-    where goods_id = #{goodsId,jdbcType=BIGINT}
+      item_desc = #{itemDesc,jdbcType=LONGVARCHAR}
+    where item_id = #{itemId,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKey" parameterType="top.zexus.common.pojo.TbProductDetail" >
     update tb_product_detail
     set created = #{created,jdbcType=TIMESTAMP},
       updated = #{updated,jdbcType=TIMESTAMP}
-    where goods_id = #{goodsId,jdbcType=BIGINT}
+    where item_id = #{itemId,jdbcType=BIGINT}
   </update>
 </mapper>

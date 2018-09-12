@@ -3,10 +3,8 @@ package top.zexus.common.utils;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import top.zexus.common.constants.CommonConstants;
-import top.zexus.common.pojo.UserToken;
+import top.zexus.common.pojo.dto.UserToken;
 
 import java.util.Date;
 

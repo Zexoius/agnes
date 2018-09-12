@@ -1,8 +1,4 @@
-package top.zexus.manager.Jedis;
-
-import org.springframework.stereotype.Component;
-import redis.clients.jedis.Jedis;
-import redis.clients.jedis.JedisPool;
+package top.zexus.manager.Redis;
 
 import java.util.List;
 

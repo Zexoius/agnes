@@ -2,6 +2,7 @@ package top.zexus.manager.Dto;
 
 import top.zexus.common.pojo.TbProduct;
 import top.zexus.common.pojo.TbUser;
+import top.zexus.common.pojo.dto.CartList;
 
 /**
  * @Author: Zexus
@@ -29,5 +30,14 @@ public class DtoUtils {
         goods.setProductImageBig(tbProduct.getImage());
 
         return goods;
+    }
+
+    public static CartList TbGoods2CartList(TbProduct tbProduct){
+        CartList cartList = new CartList();
+        cartList.setGoodsId(tbProduct.getId());
+        cartList.setGoodsName(tbProduct.getTitle());
+        cartList.setSalePrice(tbProduct.getPrice());
+        cartList.setProductImg(tbProduct.getImage());
+        return cartList;
     }
 }

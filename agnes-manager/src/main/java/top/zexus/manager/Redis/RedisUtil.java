@@ -1,7 +1,9 @@
-package top.zexus.manager.Jedis;
+package top.zexus.manager.Redis;
 
+import com.google.gson.Gson;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
+import top.zexus.common.utils.JSONUtils;
 
 import javax.annotation.Resource;
 import java.util.List;

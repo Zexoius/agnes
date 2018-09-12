@@ -1,4 +1,4 @@
-package top.zexus.common.pojo;
+package top.zexus.common.pojo.dto;
 
 import java.io.Serializable;
 import java.util.List;

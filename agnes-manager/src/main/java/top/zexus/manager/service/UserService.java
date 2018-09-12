@@ -40,5 +40,11 @@ public interface UserService {
      */
     boolean checkData(String params,int type);
 
+    /**
+     * Redis 测试
+     * @return
+     */
     String tesRedis();
+
+    int logout(String token);
 }

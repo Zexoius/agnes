@@ -2,13 +2,13 @@ package top.zexus.manager.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.google.gson.Gson;
 import org.springframework.stereotype.Service;
 import top.zexus.common.mapper.TbPanelContentMapper;
 import top.zexus.common.mapper.TbPanelMapper;
 import top.zexus.common.mapper.TbProductDetailMapper;
 import top.zexus.common.mapper.TbProductMapper;
 import top.zexus.common.pojo.*;
+import top.zexus.common.pojo.dto.AllGoodsResult;
 import top.zexus.common.utils.Result;
 import top.zexus.manager.Dto.DtoUtils;
 import top.zexus.manager.Dto.Goods;

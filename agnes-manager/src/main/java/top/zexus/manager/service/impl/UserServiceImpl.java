@@ -5,12 +5,12 @@ import org.springframework.stereotype.Service;
 import top.zexus.common.mapper.TbUserMapper;
 import top.zexus.common.pojo.TbUser;
 import top.zexus.common.pojo.TbUserExample;
-import top.zexus.common.pojo.UserToken;
+import top.zexus.common.pojo.dto.UserToken;
 import top.zexus.common.utils.JwtUtils;
 import top.zexus.common.utils.Result;
 import top.zexus.manager.Dto.DtoUtils;
 import top.zexus.manager.Dto.User;
-import top.zexus.manager.Jedis.RedisClient;
+import top.zexus.manager.Redis.RedisClient;
 import top.zexus.manager.service.UserService;
 
 import javax.annotation.Resource;
@@ -27,7 +27,7 @@ public class UserServiceImpl implements UserService {
     private TbUserMapper tbUserMapper;
     @Resource
     private RedisClient redisClient;
-    private int SESSION_EXPIRE = 1800;
+    private int SESSION_EXPIRE = 2*60*60*1000;
 
     @Override
     public Result userLogin(String username, String password) {
@@ -55,7 +55,7 @@ public class UserServiceImpl implements UserService {
         UserToken userToken = new UserToken(user.getId().toString(),user.getUsername());
         String token = "";
         try {
-            token = JwtUtils.generateToken(userToken,2*60*60*1000);
+            token = JwtUtils.generateToken(userToken,SESSION_EXPIRE);
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -146,5 +146,11 @@ public class UserServiceImpl implements UserService {
         String result = redisClient.get(key);
         String json = new Gson().toJson(result);
         return json;
+    }
+
+    @Override
+    public int logout(String token) {
+         redisClient.del("SESSION:" + token);
+         return 1;
     }
 }

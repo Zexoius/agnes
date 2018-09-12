@@ -15,7 +15,7 @@ public interface CartService {
      * @param num
      * @return
      */
-    Result addCart(long userId, long goodsId, int num);
+    int addCart(long userId, long goodsId, int num);
 
     /**
      * 删除单个
@@ -28,10 +28,9 @@ public interface CartService {
     /**
      * 获取
      * @param userId
-     * @param goodsId
      * @return
      */
-    Result getCartList(long userId,long goodsId);
+    Result getCartList(long userId);
 
     /**
      * 全选

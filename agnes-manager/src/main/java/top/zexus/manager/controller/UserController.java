@@ -5,7 +5,7 @@ package top.zexus.manager.controller;
 import org.springframework.web.bind.annotation.*;
 import top.zexus.common.pojo.dto.LoginDto;
 import top.zexus.common.utils.Result;
-import top.zexus.manager.Jedis.RedisClient;
+import top.zexus.manager.Redis.RedisClient;
 import top.zexus.manager.service.UserService;
 
 import javax.annotation.Resource;
@@ -48,6 +48,14 @@ public class UserController {
     public void doJedisTest(){
         String result = userService.tesRedis();
         System.out.println(result);
+    }
+
+    @RequestMapping(value = "/logout",method = RequestMethod.GET)
+    public Result loginout(@RequestParam(defaultValue = "") String token){
+        int result = userService.logout(token);
+        System.out.println("result:"+result);
+        return Result.ok()
+                .put("result",result);
     }
 
 }

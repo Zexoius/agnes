@@ -10,9 +10,9 @@ import top.zexus.common.mapper.TbProductMapper;
 import top.zexus.common.pojo.*;
 import top.zexus.common.pojo.dto.AllGoodsResult;
 import top.zexus.common.utils.Result;
-import top.zexus.manager.Dto.DtoUtils;
-import top.zexus.manager.Dto.Goods;
-import top.zexus.manager.Dto.GoodsDetail;
+import top.zexus.common.utils.DtoUtils;
+import top.zexus.common.pojo.dto.Goods;
+import top.zexus.common.pojo.dto.GoodsDetail;
 import top.zexus.manager.service.GoodsService;
 
 import javax.annotation.Resource;

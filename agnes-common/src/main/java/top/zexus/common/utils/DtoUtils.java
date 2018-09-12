@@ -1,8 +1,10 @@
-package top.zexus.manager.Dto;
+package top.zexus.common.utils;
 
 import top.zexus.common.pojo.TbProduct;
 import top.zexus.common.pojo.TbUser;
 import top.zexus.common.pojo.dto.CartList;
+import top.zexus.common.pojo.dto.Goods;
+import top.zexus.common.pojo.dto.User;
 
 /**
  * @Author: Zexus

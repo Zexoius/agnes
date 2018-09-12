@@ -6,7 +6,7 @@ import top.zexus.common.mapper.TbProductMapper;
 import top.zexus.common.pojo.TbProduct;
 import top.zexus.common.pojo.dto.CartList;
 import top.zexus.common.utils.Result;
-import top.zexus.manager.Dto.DtoUtils;
+import top.zexus.common.utils.DtoUtils;
 import top.zexus.manager.Redis.RedisClient;
 import top.zexus.manager.service.CartService;
 

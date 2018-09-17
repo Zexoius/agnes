@@ -23,7 +23,7 @@ public interface CartService {
      * @param goodsId
      * @return
      */
-    Result delCartListItem(long userId,long goodsId);
+    int delCartListItem(long userId,long goodsId);
 
     /**
      * 获取

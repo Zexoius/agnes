@@ -2,6 +2,8 @@ package top.zexus.manager.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import org.springframework.stereotype.Service;
 import top.zexus.common.mapper.TbPanelContentMapper;
 import top.zexus.common.mapper.TbPanelMapper;
@@ -13,6 +15,7 @@ import top.zexus.common.utils.Result;
 import top.zexus.common.utils.DtoUtils;
 import top.zexus.common.pojo.dto.Goods;
 import top.zexus.common.pojo.dto.GoodsDetail;
+import top.zexus.manager.Redis.RedisClient;
 import top.zexus.manager.service.GoodsService;
 
 import javax.annotation.Resource;
@@ -34,6 +37,10 @@ public class GoodsServiceImpl implements GoodsService {
     TbPanelMapper tbPanelMapper;
     @Resource
     TbPanelContentMapper tbPanelContentMapper;
+    @Resource
+    private RedisClient redisClient;
+
+    private String HOME = "HOME";
 
     @Override
     public Result goodsDetail(Long goodsId) {
@@ -99,11 +106,28 @@ public class GoodsServiceImpl implements GoodsService {
     @Override
     public Result getHome() {
         List<TbPanel> list = new ArrayList<>();
+//       读取缓存
+        try{
+            String json = redisClient.get(HOME);
+            if (json != null){
+                list = new Gson().fromJson(json,new TypeToken<List<TbPanel>>(){}.getType());
+                System.out.println("读取首页缓存");
+                return Result.ok()
+                        .put("home",list);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
         TbPanelExample example = new TbPanelExample();
         TbPanelExample.Criteria criteria = example.createCriteria();
 //        查询条件
+//        0：首页  1：商品推荐
         criteria.andPositionEqualTo(0);
+//        就绪状态：1
         criteria.andStatusEqualTo(1);
+//        按字段名排序
+//        order:顺序  clause:字段
         example.setOrderByClause("sort_order");
         list = tbPanelMapper.selectByExample(example);
         for (TbPanel tbPanel : list){
@@ -123,7 +147,14 @@ public class GoodsServiceImpl implements GoodsService {
             }
             tbPanel.setPanelContents(contentList);
         }
+//        添加缓存
+        try {
+            redisClient.set(HOME,new Gson().toJson(list));
+            System.out.println("添加首页缓存");
+        }catch (Exception e){
+            e.printStackTrace();
+        }
         return Result.ok()
-                .put("panelList",list);
+                .put("home",list);
     }
 }

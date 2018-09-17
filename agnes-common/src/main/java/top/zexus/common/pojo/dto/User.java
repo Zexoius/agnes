@@ -14,6 +14,19 @@ public class User implements Serializable {
     private String sex;
     private int state;
     private String token;
+    private String avator;
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getAvator() {
+        return avator;
+    }
+
+    public void setAvator(String avator) {
+        this.avator = avator;
+    }
 
     public String getToken() {
         return token;

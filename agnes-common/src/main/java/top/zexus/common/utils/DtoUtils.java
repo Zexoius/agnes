@@ -19,6 +19,7 @@ public class DtoUtils {
         user.setUsername(tbUser.getUsername());
         user.setPhone(tbUser.getPhone());
         user.setSex(tbUser.getSex());
+        user.setAvator(tbUser.getImg());
         return user;
     }
 
@@ -39,7 +40,7 @@ public class DtoUtils {
         cartList.setGoodsId(tbProduct.getId());
         cartList.setGoodsName(tbProduct.getTitle());
         cartList.setSalePrice(tbProduct.getPrice());
-        cartList.setProductImg(tbProduct.getImage());
+        cartList.setProductImg(tbProduct.getImages()[0]);
         return cartList;
     }
 }

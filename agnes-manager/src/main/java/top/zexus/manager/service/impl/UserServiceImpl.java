@@ -34,6 +34,7 @@ public class UserServiceImpl implements UserService {
         TbUserExample example = new TbUserExample();
         TbUserExample.Criteria criteria = example.createCriteria();
         criteria.andUsernameEqualTo(username);
+//        按条件查询
         List<TbUser> list = tbUserMapper.selectByExample(example);
         if (list.size() < 1) {
 //            User user = new User();

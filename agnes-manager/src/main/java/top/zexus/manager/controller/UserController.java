@@ -1,7 +1,5 @@
 package top.zexus.manager.controller;
 
-
-
 import org.springframework.web.bind.annotation.*;
 import top.zexus.common.pojo.dto.LoginDto;
 import top.zexus.common.utils.Result;
@@ -34,6 +32,7 @@ public class UserController {
 
     @RequestMapping(value = "/checkLogin",method = RequestMethod.GET)
     public Result checkLogin(@RequestParam(defaultValue = "") String token){
+//        System.out.println("--------执行checkLogin---------");
         Result result = userService.getUserByToken(token);
         return result;
     }

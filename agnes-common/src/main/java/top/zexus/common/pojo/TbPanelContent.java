@@ -25,6 +25,14 @@ public class TbPanelContent {
     private Date created;
 
     private Date updated;
+    /**
+     * 关联商品信息
+     */
+    private BigDecimal salePrice;
+
+    private String productName;
+
+    private String subTitle;
 
     public BigDecimal getSalePrice() {
         return salePrice;
@@ -49,26 +57,6 @@ public class TbPanelContent {
     public void setSubTitle(String subTitle) {
         this.subTitle = subTitle;
     }
-
-    public String getProductImageBig() {
-        return productImageBig;
-    }
-
-    public void setProductImageBig(String productImageBig) {
-        this.productImageBig = productImageBig;
-    }
-
-    /**
-     * 关联商品信息
-
-     */
-    private BigDecimal salePrice;
-
-    private String productName;
-
-    private String subTitle;
-
-    private String productImageBig;
 
     public Integer getId() {
         return id;

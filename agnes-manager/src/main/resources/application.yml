@@ -5,7 +5,7 @@ spring:
   application:
     name: manager
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/agnes?useUnicode=true&characterEncoding=utf8
+    url: jdbc:mysql://localhost:3306/agnes?useUnicode=true&characterEncoding=utf8
     username: root
     password: 123456
     driver-class-name: com.mysql.jdbc.Driver

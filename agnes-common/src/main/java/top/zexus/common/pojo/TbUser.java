@@ -13,6 +13,8 @@ public class TbUser {
 
     private Integer state;
 
+    private String img;
+
     public Integer getId() {
         return id;
     }
@@ -59,5 +61,13 @@ public class TbUser {
 
     public void setState(Integer state) {
         this.state = state;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img == null ? null : img.trim();
     }
 }

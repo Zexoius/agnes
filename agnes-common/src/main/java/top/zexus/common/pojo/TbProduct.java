@@ -26,6 +26,10 @@ public class TbProduct {
 
     private Date updated;
 
+    public String getImage() {
+        return image;
+    }
+
     public Long getId() {
         return id;
     }
@@ -74,8 +78,12 @@ public class TbProduct {
         this.limitNum = limitNum;
     }
 
-    public String getImage() {
-        return image;
+    public String[] getImages() {
+        if (image != null && !"".equals(image)) {
+            String[] strings = image.split(",");
+            return strings;
+        }
+        return null;
     }
 
     public void setImage(String image) {

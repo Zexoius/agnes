@@ -22,6 +22,13 @@ public class TbPanel {
 
     private Date created;
 
+    private Date updated;
+
+    /**
+     * 关联商品信息
+     */
+    private List<TbPanelContent> panelContents;
+
     public List<TbPanelContent> getPanelContents() {
         return panelContents;
     }
@@ -29,10 +36,6 @@ public class TbPanel {
     public void setPanelContents(List<TbPanelContent> panelContents) {
         this.panelContents = panelContents;
     }
-
-    private Date updated;
-
-    private List<TbPanelContent> panelContents;
 
     public Integer getId() {
         return id;

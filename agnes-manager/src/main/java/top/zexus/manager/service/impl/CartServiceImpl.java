@@ -52,27 +52,29 @@ public class CartServiceImpl implements CartService {
             CartList cartList = DtoUtils.TbGoods2CartList(tbProduct);
             cartList.setGoodsNum((long) num);
             cartList.setChecked("1");
-            redisClient.hset(CART + ":" + "" + userId,"" + goodsId,new Gson().toJson(cartList));
+//            cartList.setProductImg(tbProduct.getImage());
+            redisClient.hset(CART + ":" + userId,"" + goodsId,new Gson().toJson(cartList));
             return 1;
         }
     }
 
     @Override
-    public Result delCartListItem(long userId, long goodsId) {
-        return null;
+    public int delCartListItem(long userId, long goodsId) {
+        redisClient.hdel(CART + ":" + userId, "" + goodsId);
+        return 1;
     }
 
     @Override
     public Result getCartList(long userId) {
         List<Object> room = redisClient.hvals(CART + ":" + userId);
         List<String> jsonList = (List<String>)(List)room;
-        List<CartList> cartLists = new ArrayList<>();
+        List<CartList> list = new ArrayList<>();
         for (String json : jsonList){
             CartList cartList = new Gson().fromJson(json,CartList.class);
-            cartLists.add(cartList);
+            list.add(cartList);
         }
         return Result.ok()
-                .put("cartList",cartLists);
+                .put("cartList",list);
     }
 
     @Override

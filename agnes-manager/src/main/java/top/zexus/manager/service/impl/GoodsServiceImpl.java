@@ -40,29 +40,47 @@ public class GoodsServiceImpl implements GoodsService {
     @Resource
     private RedisClient redisClient;
 
-    private String HOME = "HOME";
+    private final String HOME = "HOME";
+    private final String PRODUCT_DET = "PRODUCT_DET";
 
     @Override
     public Result goodsDetail(Long goodsId) {
+        try {
+            String json = redisClient.get(PRODUCT_DET + ":" + goodsId);
+            if (json != null) {
+                GoodsDetail goodsDetail = new Gson().fromJson(json, GoodsDetail.class);
+                System.out.println("读取商品详情缓存");
+//                redisClient.expire(PRODUCT_DET + ":" + goodsId,EXPIRE_TIME);
+                return Result.ok()
+                        .put("goodsDetail", goodsDetail);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         TbProduct tbProduct = tbProductMapper.selectByPrimaryKey(goodsId);
         GoodsDetail detail = new GoodsDetail();
         detail.setGoodsId(goodsId);
         detail.setTitle(tbProduct.getTitle());
         detail.setDescription(tbProduct.getSellPoint());
-        detail.setPrice(tbProduct.getPrice());
+        detail.setSaleprice(tbProduct.getPrice());
         TbProductDetail tbProductDetail = tbProductDetailMapper.selectByPrimaryKey(goodsId);
         detail.setDetail(tbProductDetail.getItemDesc());
-        if (tbProduct.getImage()!=null && !tbProduct.getImage().isEmpty()){
+        if (tbProduct.getImage() != null && !tbProduct.getImage().isEmpty()) {
             String images[] = tbProduct.getImage().split(",");
             detail.setProductImageBig(images[0]);
             List list = new ArrayList();
-            for (int i=0;i<images.length;i++){
+            for (int i = 0; i < images.length; i++) {
                 list.add(images[i]);
             }
             detail.setProductImageSmall(list);
         }
+        try {
+            redisClient.set(PRODUCT_DET + ":" + goodsId, new Gson().toJson(detail));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return Result.ok()
-                .put("productDetail",detail);
+                .put("goodsDetail", detail);
     }
 
     @Override
@@ -100,22 +118,23 @@ public class GoodsServiceImpl implements GoodsService {
         allGoodsResult.setTotal((int) pageInfo.getTotal());
 
         return Result.ok()
-                .put("allGoodsResult", allGoodsResult);
+                .put("result", allGoodsResult);
     }
 
     @Override
     public Result getHome() {
         List<TbPanel> list = new ArrayList<>();
 //       读取缓存
-        try{
+        try {
             String json = redisClient.get(HOME);
-            if (json != null){
-                list = new Gson().fromJson(json,new TypeToken<List<TbPanel>>(){}.getType());
+            if (json != null) {
+                list = new Gson().fromJson(json, new TypeToken<List<TbPanel>>() {
+                }.getType());
                 System.out.println("读取首页缓存");
                 return Result.ok()
-                        .put("home",list);
+                        .put("home", list);
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
@@ -130,15 +149,15 @@ public class GoodsServiceImpl implements GoodsService {
 //        order:顺序  clause:字段
         example.setOrderByClause("sort_order");
         list = tbPanelMapper.selectByExample(example);
-        for (TbPanel tbPanel : list){
+        for (TbPanel tbPanel : list) {
             TbPanelContentExample contentExample = new TbPanelContentExample();
             contentExample.setOrderByClause("sort_order");
             TbPanelContentExample.Criteria contentCriteria = contentExample.createCriteria();
 //            查询条件
             contentCriteria.andPanelIdEqualTo(tbPanel.getId());
             List<TbPanelContent> contentList = tbPanelContentMapper.selectByExample(contentExample);
-            for (TbPanelContent content : contentList){
-                if (content.getProductId() != null){
+            for (TbPanelContent content : contentList) {
+                if (content.getProductId() != null) {
                     TbProduct tbProduct = tbProductMapper.selectByPrimaryKey(content.getProductId());
                     content.setProductName(tbProduct.getTitle());
                     content.setSalePrice(tbProduct.getPrice());
@@ -149,12 +168,12 @@ public class GoodsServiceImpl implements GoodsService {
         }
 //        添加缓存
         try {
-            redisClient.set(HOME,new Gson().toJson(list));
+            redisClient.set(HOME, new Gson().toJson(list));
             System.out.println("添加首页缓存");
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return Result.ok()
-                .put("home",list);
+                .put("home", list);
     }
 }

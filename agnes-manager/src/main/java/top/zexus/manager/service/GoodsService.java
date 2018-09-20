@@ -11,6 +11,7 @@ public interface GoodsService {
 
     /**
      * 分页多条件获取商品
+     *
      * @param page
      * @param size
      * @param sort
@@ -19,10 +20,11 @@ public interface GoodsService {
      * @param priceLt
      * @return
      */
-    Result getAllGoods(int page,int size,String sort,Long cid,int priceGt,int priceLt);
+    Result getAllGoods(int page, int size, String sort, Long cid, int priceGt, int priceLt);
 
     /**
      * 商品详情
+     *
      * @param goodsId
      * @return
      */
@@ -30,6 +32,7 @@ public interface GoodsService {
 
     /**
      * 获取首页内容
+     *
      * @return
      */
     Result getHome();

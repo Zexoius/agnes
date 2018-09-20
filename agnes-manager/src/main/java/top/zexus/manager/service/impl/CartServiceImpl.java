@@ -29,31 +29,31 @@ public class CartServiceImpl implements CartService {
 
     @Override
     public int addCart(long userId, long goodsId, int num) {
-        Boolean flag = redisClient.hexists(CART + ":" + userId,"" + goodsId);
-        if (flag){
+        Boolean flag = redisClient.hexists(CART + ":" + userId, "" + goodsId);
+        if (flag) {
             Object room = redisClient.hget(CART + ":" + userId, "" + goodsId);
             try {
-                if (room == null){
+                if (room == null) {
                     throw new Exception("查无商品");
                 }
-            }catch (Exception e){
+            } catch (Exception e) {
                 e.printStackTrace();
             }
             String json = (String) room;
-            CartList cartList = new Gson().fromJson(json,CartList.class);
+            CartList cartList = new Gson().fromJson(json, CartList.class);
             cartList.setGoodsNum(cartList.getGoodsNum() + num);
-            redisClient.hset(CART + ":" + userId,"" + goodsId,new Gson().toJson(cartList));
+            redisClient.hset(CART + ":" + userId, "" + goodsId, new Gson().toJson(cartList));
             return 1;
-        }else {
+        } else {
             TbProduct tbProduct = tbProductMapper.selectByPrimaryKey(goodsId);
-            if (tbProduct == null){
+            if (tbProduct == null) {
                 return 0;
             }
             CartList cartList = DtoUtils.TbGoods2CartList(tbProduct);
             cartList.setGoodsNum((long) num);
             cartList.setChecked("1");
 //            cartList.setProductImg(tbProduct.getImage());
-            redisClient.hset(CART + ":" + userId,"" + goodsId,new Gson().toJson(cartList));
+            redisClient.hset(CART + ":" + userId, "" + goodsId, new Gson().toJson(cartList));
             return 1;
         }
     }
@@ -67,14 +67,14 @@ public class CartServiceImpl implements CartService {
     @Override
     public Result getCartList(long userId) {
         List<Object> room = redisClient.hvals(CART + ":" + userId);
-        List<String> jsonList = (List<String>)(List)room;
+        List<String> jsonList = (List<String>) (List) room;
         List<CartList> list = new ArrayList<>();
-        for (String json : jsonList){
-            CartList cartList = new Gson().fromJson(json,CartList.class);
+        for (String json : jsonList) {
+            CartList cartList = new Gson().fromJson(json, CartList.class);
             list.add(cartList);
         }
         return Result.ok()
-                .put("cartList",list);
+                .put("cartList", list);
     }
 
     @Override

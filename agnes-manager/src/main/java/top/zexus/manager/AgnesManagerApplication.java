@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
 
 @EnableFeignClients(basePackages = {"top.zexus"})
-@SpringBootApplication(scanBasePackages = {"top.zexus.manager","top.zexus.common"})
+@SpringBootApplication(scanBasePackages = {"top.zexus.manager", "top.zexus.common"})
 @MapperScan("top.zexus.common.mapper")
 public class AgnesManagerApplication {
 

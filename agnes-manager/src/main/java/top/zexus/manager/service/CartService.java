@@ -10,6 +10,7 @@ import top.zexus.common.utils.Result;
 public interface CartService {
     /**
      * 添加
+     *
      * @param userId
      * @param goodsId
      * @param num
@@ -19,14 +20,16 @@ public interface CartService {
 
     /**
      * 删除单个
+     *
      * @param userId
      * @param goodsId
      * @return
      */
-    int delCartListItem(long userId,long goodsId);
+    int delCartListItem(long userId, long goodsId);
 
     /**
      * 获取
+     *
      * @param userId
      * @return
      */
@@ -34,14 +37,16 @@ public interface CartService {
 
     /**
      * 全选
+     *
      * @param userId
      * @param checked
      * @return
      */
-    Result checkAll(long userId,String checked);
+    Result checkAll(long userId, String checked);
 
     /**
      * 删除已选
+     *
      * @param userId
      * @return
      */
@@ -49,11 +54,12 @@ public interface CartService {
 
     /**
      * 更新
+     *
      * @param userId
      * @param goodsId
      * @param num
      * @param checked
      * @return
      */
-    Result updateCartNum(long userId,long goodsId,int num,String checked);
+    Result updateCartNum(long userId, long goodsId, int num, String checked);
 }

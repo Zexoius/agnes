@@ -13,7 +13,7 @@ public class GoodsDetail implements Serializable {
 
     private Long goodsId;
 
-    private BigDecimal price;
+    private BigDecimal saleprice;
 
     private String title;
 
@@ -23,6 +23,17 @@ public class GoodsDetail implements Serializable {
 
     private String productImageBig;
 
+    private List<?> productImageSmall;
+
+
+    public BigDecimal getSaleprice() {
+        return saleprice;
+    }
+
+    public void setSaleprice(BigDecimal saleprice) {
+        this.saleprice = saleprice;
+    }
+
     public String getDetail() {
         return detail;
     }
@@ -31,22 +42,12 @@ public class GoodsDetail implements Serializable {
         this.detail = detail;
     }
 
-    private List<?> productImageSmall;
-
     public Long getGoodsId() {
         return goodsId;
     }
 
     public void setGoodsId(Long goodsId) {
         this.goodsId = goodsId;
-    }
-
-    public BigDecimal getPrice() {
-        return price;
-    }
-
-    public void setPrice(BigDecimal price) {
-        this.price = price;
     }
 
     public String getTitle() {

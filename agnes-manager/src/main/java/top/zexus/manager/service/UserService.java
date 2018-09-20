@@ -11,6 +11,7 @@ public interface UserService {
 
     /**
      * 用户登录
+     *
      * @param username
      * @param password
      * @return
@@ -19,6 +20,7 @@ public interface UserService {
 
     /**
      * 检测token
+     *
      * @param token
      * @return
      */
@@ -26,22 +28,25 @@ public interface UserService {
 
     /**
      * 注册
+     *
      * @param username
      * @param password
      * @return
      */
-    Result register(String username,String password);
+    Result register(String username, String password);
 
     /**
      * 检测数据
+     *
      * @param params
      * @param type
      * @return
      */
-    boolean checkData(String params,int type);
+    boolean checkData(String params, int type);
 
     /**
      * Redis 测试
+     *
      * @return
      */
     String tesRedis();

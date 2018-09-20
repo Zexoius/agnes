@@ -8,7 +8,7 @@ import java.util.Map;
  * @Description:
  * @Date: Created in 21:02 2018/7/22
  */
-public class Result extends HashMap<String,Object> {
+public class Result extends HashMap<String, Object> {
     private static final long serialVersionUID = 1L;
 
     public Result() {
@@ -20,8 +20,8 @@ public class Result extends HashMap<String,Object> {
         return error(500, "操作失败");
     }
 
-    public static Result operate(boolean b){
-        if(b){
+    public static Result operate(boolean b) {
+        if (b) {
             return Result.ok();
         }
         return Result.error();
@@ -62,12 +62,12 @@ public class Result extends HashMap<String,Object> {
         return error(403, "你没有访问权限");
     }
 
-    public static Result data(Object data){
-        return Result.ok().put("data",data);
+    public static Result data(Object data) {
+        return Result.ok().put("data", data);
     }
 
-    public static Result page(Object page){
-        return Result.ok().put("page",page);
+    public static Result page(Object page) {
+        return Result.ok().put("page", page);
     }
 
     @Override

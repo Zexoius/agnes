@@ -27,7 +27,7 @@ public class UserServiceImpl implements UserService {
     private TbUserMapper tbUserMapper;
     @Resource
     private RedisClient redisClient;
-    private int SESSION_EXPIRE = 2*60*60*1000;
+    private int SESSION_EXPIRE = 2 * 60 * 60 * 1000;
 
     @Override
     public Result userLogin(String username, String password) {
@@ -45,19 +45,19 @@ public class UserServiceImpl implements UserService {
         }
         TbUser tbUser = list.get(0);
         //        admin
-        if (null == tbUser || !password.equals(tbUser.getPassword())){
+        if (null == tbUser || !password.equals(tbUser.getPassword())) {
 //            User user = new User();
 //            user.setState(0);
 //            user.setMsg("用户名或密码错误");
             return Result.error("用户名或密码错误")
-                    .put("state",0);
+                    .put("state", 0);
         }
         User user = DtoUtils.TbUser2User(tbUser);
-        UserToken userToken = new UserToken(user.getId().toString(),user.getUsername());
+        UserToken userToken = new UserToken(user.getId().toString(), user.getUsername());
         String token = "";
         try {
-            token = JwtUtils.generateToken(userToken,SESSION_EXPIRE);
-        }catch (Exception e){
+            token = JwtUtils.generateToken(userToken, SESSION_EXPIRE);
+        } catch (Exception e) {
             e.printStackTrace();
         }
         user.setToken(token);
@@ -80,40 +80,40 @@ public class UserServiceImpl implements UserService {
 //        }
 //        System.out.println(json);
         String json = redisClient.get("SESSION:" + token);
-        if (json == null){
+        if (json == null) {
             User user = new User();
             user.setState(0);
             user.setMsg("用户信息不存在");
             return Result.error("未登录")
-                    .put("user",user);
+                    .put("user", user);
         }
 //        User user = new Gson().fromJson(json,User.class);
 //        if (user == null){
 //            return Result.error("用户信息不存在");
 //        }
-        redisClient.expire("SESSION:" + token,SESSION_EXPIRE);
-        User user = new Gson().fromJson(json,User.class);
+        redisClient.expire("SESSION:" + token, SESSION_EXPIRE);
+        User user = new Gson().fromJson(json, User.class);
         return Result.ok("已登陆")
-                .put("user",user)
-                .put("token",token);
+                .put("user", user)
+                .put("token", token);
     }
 
     @Override
     public Result register(String username, String password) {
         TbUser tbUser = new TbUser();
         tbUser.setUsername(username);
-        if (username.isEmpty() || password.isEmpty()){
-            return  Result.error("账户名或密码不为空");
+        if (username.isEmpty() || password.isEmpty()) {
+            return Result.error("账户名或密码不为空");
         }
-        boolean flag = checkData(username,1);
-        if (!flag){
+        boolean flag = checkData(username, 1);
+        if (!flag) {
             return Result.error("已被注册");
         }
 //        String md5Psw = DigestUtils.md5DigestAsHex(password.getBytes());
         tbUser.setUsername(username);
 //        tbUser.setPassword(md5Psw);
         tbUser.setPassword(password);
-        if (tbUserMapper.insert(tbUser) != 1){
+        if (tbUserMapper.insert(tbUser) != 1) {
             return Result.error("注册失败");
         }
         return Result.ok("注册成功");
@@ -125,15 +125,15 @@ public class UserServiceImpl implements UserService {
         TbUserExample.Criteria criteria = example.createCriteria();
         criteria.andStateEqualTo(1);
 //        1:用户名；2:手机号；3：邮箱
-        if (type == 1){
+        if (type == 1) {
             criteria.andUsernameEqualTo(params);
-        }else if (type == 2){
+        } else if (type == 2) {
             criteria.andPhoneEqualTo(params);
-        }else {
+        } else {
             return false;
         }
         List<TbUser> list = tbUserMapper.selectByExample(example);
-        if (list != null && list.size() > 0){
+        if (list != null && list.size() > 0) {
             return false;
         }
         return true;
@@ -143,7 +143,7 @@ public class UserServiceImpl implements UserService {
     public String tesRedis() {
         String key = "user";
         String value = "zexus";
-        redisClient.set(key,value);
+        redisClient.set(key, value);
         String result = redisClient.get(key);
         String json = new Gson().toJson(result);
         return json;
@@ -151,7 +151,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public int logout(String token) {
-         redisClient.del("SESSION:" + token);
-         return 1;
+        redisClient.del("SESSION:" + token);
+        return 1;
     }
 }

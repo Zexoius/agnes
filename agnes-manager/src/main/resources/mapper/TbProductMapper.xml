@@ -302,4 +302,18 @@
       updated = #{updated,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=BIGINT}
   </update>
+  <!-- Where is new -->
+  <select id="selectGoodsFront" resultMap="BaseResultMap">
+    SELECT * FROM tb_product
+    WHERE status = 1
+    <if test="priceGt != null and priceGt >= 0 and priceLt != null and priceLt >= 0">
+      AND price BETWEEN #{priceGt} AND #{priceLt}
+    </if>
+    <if test="cid != null">
+      AND cid = #{cid}
+    </if>
+    ORDER BY
+    ${orderCol}
+    ${orderDir}
+  </select>
 </mapper>

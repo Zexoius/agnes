@@ -17,15 +17,15 @@ public class JwtUtils {
                 .setSubject(userToken.getUsername())
                 .setId(userToken.getUserId())
                 .claim(CommonConstants.CONTEXT_USER_ID, userToken.getUserId())
-                .setExpiration(new Date(System.currentTimeMillis()+expire))
-                .signWith(SignatureAlgorithm.HS256,CommonConstants.JWT_PRIVATE_KEY)
+                .setExpiration(new Date(System.currentTimeMillis() + expire))
+                .signWith(SignatureAlgorithm.HS256, CommonConstants.JWT_PRIVATE_KEY)
                 .compact();
         System.out.println("------------生成token-------:" + token);
         return token;
     }
 
 
-    public static String getInfoFromToken(String token) throws Exception{
+    public static String getInfoFromToken(String token) throws Exception {
         String returnValue = "";
         try {
             Claims claims = Jwts.parser()
@@ -36,11 +36,10 @@ public class JwtUtils {
             System.out.println("-------Subject--------:" + claims.getSubject());
             System.out.println("解析token成功");
             returnValue = claims.toString();
-        }catch (Exception e){
+        } catch (Exception e) {
             throw new Exception("过期登录");
 //            e.printStackTrace();
-        }
-        finally {
+        } finally {
             return returnValue;
         }
     }

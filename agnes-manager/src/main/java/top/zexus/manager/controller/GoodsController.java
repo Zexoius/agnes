@@ -21,25 +21,25 @@ public class GoodsController {
     @Resource
     GoodsService goodsService;
 
-    @RequestMapping(value = "/goodsDetail",method = RequestMethod.GET)
+    @RequestMapping(value = "/goodsDetail", method = RequestMethod.GET)
     public Result goodsDetail(Long goodsId) {
         Result result = goodsService.goodsDetail(goodsId);
         return result;
     }
 
-    @RequestMapping(value = "/getAllGoods",method = RequestMethod.GET)
+    @RequestMapping(value = "/getAllGoods", method = RequestMethod.GET)
     public Result getAllGoods(@RequestParam(defaultValue = "1") int page,
                               @RequestParam(defaultValue = "20") int size,
-                              @RequestParam(defaultValue = "") String sort,
-                              @RequestParam(defaultValue = "") Long cid,
+                              @RequestParam(defaultValue = "1") String sort,
+                              @RequestParam(defaultValue = "560") Long cid,
                               @RequestParam(defaultValue = "-1") int priceGt,
                               @RequestParam(defaultValue = "-1") int priceLt) {
         Result result = goodsService.getAllGoods(page, size, sort, cid, priceGt, priceLt);
         return result;
     }
 
-    @RequestMapping(value = "/home",method = RequestMethod.GET)
-    public Result getGoodsHome(){
+    @RequestMapping(value = "/home", method = RequestMethod.GET)
+    public Result getGoodsHome() {
         Result result = goodsService.getHome();
         return result;
     }

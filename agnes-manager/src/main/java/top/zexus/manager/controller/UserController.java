@@ -22,39 +22,39 @@ public class UserController {
     @Resource
     private RedisClient redisClient;
 
-    @RequestMapping(value = "/login",method = RequestMethod.POST)
-    public Result login(@RequestBody LoginDto loginDto, HttpServletRequest request){
-       Result result = userService.userLogin(loginDto.getUsername().trim(),loginDto.getPassword().trim());
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    public Result login(@RequestBody LoginDto loginDto, HttpServletRequest request) {
+        Result result = userService.userLogin(loginDto.getUsername().trim(), loginDto.getPassword().trim());
 //       System.out.println(loginDto.getUsername());
 //       System.out.println(loginDto.getPassword());
-       return result;
+        return result;
     }
 
-    @RequestMapping(value = "/checkLogin",method = RequestMethod.GET)
-    public Result checkLogin(@RequestParam(defaultValue = "") String token){
+    @RequestMapping(value = "/checkLogin", method = RequestMethod.GET)
+    public Result checkLogin(@RequestParam(defaultValue = "") String token) {
 //        System.out.println("--------执行checkLogin---------");
         Result result = userService.getUserByToken(token);
         return result;
     }
 
-    @RequestMapping(value = "/register",method = RequestMethod.POST)
-    public Result register(@RequestBody LoginDto loginDto){
-        Result result = userService.register(loginDto.getUsername(),loginDto.getPassword());
+    @RequestMapping(value = "/register", method = RequestMethod.POST)
+    public Result register(@RequestBody LoginDto loginDto) {
+        Result result = userService.register(loginDto.getUsername(), loginDto.getPassword());
         return result;
     }
 
-    @RequestMapping(value = "/testJedis",method = RequestMethod.GET)
-    public void doJedisTest(){
+    @RequestMapping(value = "/testJedis", method = RequestMethod.GET)
+    public void doJedisTest() {
         String result = userService.tesRedis();
         System.out.println(result);
     }
 
-    @RequestMapping(value = "/logout",method = RequestMethod.GET)
-    public Result loginout(@RequestParam(defaultValue = "") String token){
+    @RequestMapping(value = "/logout", method = RequestMethod.GET)
+    public Result loginout(@RequestParam(defaultValue = "") String token) {
         int result = userService.logout(token);
-        System.out.println("result:"+result);
+        System.out.println("result:" + result);
         return Result.ok()
-                .put("result",result);
+                .put("result", result);
     }
 
 }

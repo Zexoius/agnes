@@ -21,29 +21,28 @@ public class CartController {
     @Resource
     private CartService cartService;
 
-    @RequestMapping(value = "/addCart",method = RequestMethod.POST)
-    public Result addCart(@RequestBody Cart cart){
-        int result = cartService.addCart(cart.getUserId(),cart.getGoodsId(),cart.getGoodsNum());
+    @RequestMapping(value = "/addCart", method = RequestMethod.POST)
+    public Result addCart(@RequestBody Cart cart) {
+        int result = cartService.addCart(cart.getUserId(), cart.getGoodsId(), cart.getGoodsNum());
         System.out.println("添加购物车");
         return Result.ok()
-                .put("cartList",result);
+                .put("cartList", result);
     }
 
-    @RequestMapping(value = "/cartList",method = RequestMethod.POST)
-    public Result getCartList(@RequestBody Cart cart){
+    @RequestMapping(value = "/cartList", method = RequestMethod.POST)
+    public Result getCartList(@RequestBody Cart cart) {
         Result result = cartService.getCartList(cart.getUserId());
         System.out.println("------获取购物车-----");
         return result;
     }
 
-    @RequestMapping(value = "/cartDel",method = RequestMethod.POST)
-    public Result delCartItem(@RequestBody Cart cart){
-        int result = cartService.delCartListItem(cart.getUserId(),cart.getGoodsId());
+    @RequestMapping(value = "/cartDel", method = RequestMethod.POST)
+    public Result delCartItem(@RequestBody Cart cart) {
+        int result = cartService.delCartListItem(cart.getUserId(), cart.getGoodsId());
         System.out.println("删除购物车");
         return Result.ok()
-                .put("result",result);
+                .put("result", result);
     }
-
 
 
 }

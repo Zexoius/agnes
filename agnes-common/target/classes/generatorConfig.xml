@@ -1,54 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
-	<!-- 数据库驱动包位置 -->
-	<classPathEntry location="E:\Mybatis-Generator\mysql-connector-java-5.1.44-bin.jar" />
-	<!--<classPathEntry location="C:\oracle\product\10.2.0\db_1\jdbc\lib\ojdbc14.jar" />-->
-	<context id="DB2Tables" targetRuntime="MyBatis3">
-		<commentGenerator>
-			<!-- 是否去除自动生成的注释 true：是 ： false:否 -->
-			<property name="suppressAllComments" value="true" />
-		</commentGenerator>
-		<!-- mysql数据库链接URL、用户名、密码 -->
-		 <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-			connectionURL="jdbc:mysql://localhost:3306/agnes"
-			userId="root"
-			password="123456">
-		<!--Oracle数据库使用 -->
-		<!--<jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver" connectionURL="jdbc:oracle:thin:@localhost:1521:orcl" userId="msa" password="msa">-->
-		</jdbcConnection>
-		<!-- 默认false，把JDBC DECIMAL 和 NUMERIC 类型解析为 Integer，为 true时把JDBC DECIMAL 和
-			NUMERIC 类型解析为java.math.BigDecimal -->
-		<javaTypeResolver>
-			<property name="forceBigDecimals" value="false" />
-		</javaTypeResolver>
+    <!-- 数据库驱动包位置 -->
+    <classPathEntry location="E:\Mybatis-Generator\mysql-connector-java-5.1.44-bin.jar"/>
+    <!--<classPathEntry location="C:\oracle\product\10.2.0\db_1\jdbc\lib\ojdbc14.jar" />-->
+    <context id="DB2Tables" targetRuntime="MyBatis3">
+        <commentGenerator>
+            <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+        <!-- mysql数据库链接URL、用户名、密码 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/agnes"
+                        userId="root"
+                        password="123456">
+            <!--Oracle数据库使用 -->
+            <!--<jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver" connectionURL="jdbc:oracle:thin:@localhost:1521:orcl" userId="msa" password="msa">-->
+        </jdbcConnection>
+        <!-- 默认false，把JDBC DECIMAL 和 NUMERIC 类型解析为 Integer，为 true时把JDBC DECIMAL 和
+            NUMERIC 类型解析为java.math.BigDecimal -->
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
 
-		<!-- targetProject:生成PO类的位置 -->
-		<javaModelGenerator targetPackage="top.zexus.common.pojo"
-				targetProject=".\src\main\java\">
-			<!-- enableSubPackages:是否让schema作为包的后缀 -->
-			<property name="enableSubPackages" value="false" />
-			<!-- 从数据库返回的值被清理前后的空格 -->
-			<property name="trimStrings" value="true" />
-		</javaModelGenerator>
-		<!-- targetProject:mapper映射文件生成的位置 -->
-		<sqlMapGenerator targetPackage="\mapper"
-				targetProject="..\agnes-manager\src\main\resources\">
-			<!-- enableSubPackages:是否让schema作为包的后缀 -->
-			<property name="enableSubPackages" value="false" />
-		</sqlMapGenerator>
-		<!-- targetPackage：mapper接口生成的位置 -->
-		<javaClientGenerator type="XMLMAPPER"
-				targetPackage="top.zexus.common.mapper"
-				targetProject=".\src\main\java\">
-			<!-- enableSubPackages:是否让schema作为包的后缀 -->
-			<property name="enableSubPackages" value="false" />
-		</javaClientGenerator>
-		<!-- 指定数据库表 -->
-		<table schema="" tableName="tb_user"></table>
-		<!--<table schema="" tableName="tb_product"></table>-->
-		<!--<table schema="" tableName="tb_product_detail"></table>-->
-		<!--<table schema="" tableName="tb_panel"></table>-->
-		<!--<table schema="" tableName="tb_panel_content"></table>-->
-	</context>
+        <!-- targetProject:生成PO类的位置 -->
+        <javaModelGenerator targetPackage="top.zexus.common.pojo"
+                            targetProject=".\src\main\java\">
+            <!-- enableSubPackages:是否让schema作为包的后缀 -->
+            <property name="enableSubPackages" value="false"/>
+            <!-- 从数据库返回的值被清理前后的空格 -->
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+        <!-- targetProject:mapper映射文件生成的位置 -->
+        <sqlMapGenerator targetPackage="\mapper"
+                         targetProject="..\agnes-manager\src\main\resources\">
+            <!-- enableSubPackages:是否让schema作为包的后缀 -->
+            <property name="enableSubPackages" value="false"/>
+        </sqlMapGenerator>
+        <!-- targetPackage：mapper接口生成的位置 -->
+        <javaClientGenerator type="XMLMAPPER"
+                             targetPackage="top.zexus.common.mapper"
+                             targetProject=".\src\main\java\">
+            <!-- enableSubPackages:是否让schema作为包的后缀 -->
+            <property name="enableSubPackages" value="false"/>
+        </javaClientGenerator>
+        <!-- 指定数据库表 -->
+        <table schema="" tableName="tb_user"></table>
+        <!--<table schema="" tableName="tb_product"></table>-->
+        <!--<table schema="" tableName="tb_product_detail"></table>-->
+        <!--<table schema="" tableName="tb_panel"></table>-->
+        <!--<table schema="" tableName="tb_panel_content"></table>-->
+    </context>
 </generatorConfiguration>

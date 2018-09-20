@@ -7,8 +7,8 @@ package top.zexus.common.constants;
  */
 public class CommonConstants {
     public final static String CONTEXT_TOKEN = "Authorization";
-    public final static String CONTEXT_USERNAME= "contextUsername";
-    public final static String CONTEXT_USER_ID= "contextUserId";
+    public final static String CONTEXT_USERNAME = "contextUsername";
+    public final static String CONTEXT_USER_ID = "contextUserId";
     public final static String RENEW_TIME = "renewtime";
     public final static String JWT_PRIVATE_KEY = "zexusTop";
     public final static String TOKEN = "token";

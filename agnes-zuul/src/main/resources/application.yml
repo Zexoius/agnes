@@ -17,5 +17,5 @@ zuul:
 #      url: http://localhost:8004/
       service-id: manager
   host:
-    socket-timeout-millis: 60000
-    connect-timeout-millis: 10000
+    socket-timeout-millis: 3000
+    connect-timeout-millis: 3000

@@ -5,11 +5,11 @@ import org.springframework.stereotype.Service;
 import top.zexus.common.mapper.TbUserMapper;
 import top.zexus.common.pojo.TbUser;
 import top.zexus.common.pojo.TbUserExample;
+import top.zexus.common.pojo.dto.User;
 import top.zexus.common.pojo.dto.UserToken;
+import top.zexus.common.utils.DtoUtils;
 import top.zexus.common.utils.JwtUtils;
 import top.zexus.common.utils.Result;
-import top.zexus.common.utils.DtoUtils;
-import top.zexus.common.pojo.dto.User;
 import top.zexus.manager.Redis.RedisClient;
 import top.zexus.manager.service.UserService;
 

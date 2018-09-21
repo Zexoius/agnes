@@ -3,8 +3,10 @@ package top.zexus.manager;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
 
+@EnableEurekaClient
 @EnableFeignClients(basePackages = {"top.zexus"})
 @SpringBootApplication(scanBasePackages = {"top.zexus.manager", "top.zexus.common"})
 @MapperScan("top.zexus.common.mapper")

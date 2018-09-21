@@ -5,8 +5,8 @@ import org.springframework.stereotype.Service;
 import top.zexus.common.mapper.TbProductMapper;
 import top.zexus.common.pojo.TbProduct;
 import top.zexus.common.pojo.dto.CartList;
-import top.zexus.common.utils.Result;
 import top.zexus.common.utils.DtoUtils;
+import top.zexus.common.utils.Result;
 import top.zexus.manager.Redis.RedisClient;
 import top.zexus.manager.service.CartService;
 
@@ -21,11 +21,11 @@ import java.util.List;
  */
 @Service
 public class CartServiceImpl implements CartService {
+    private final String CART = "CART";
     @Resource
     private RedisClient redisClient;
     @Resource
     private TbProductMapper tbProductMapper;
-    private final String CART = "CART";
 
     @Override
     public int addCart(long userId, long goodsId, int num) {

@@ -51,5 +51,6 @@
         <!--<table schema="" tableName="tb_product_detail"></table>-->
         <!--<table schema="" tableName="tb_panel"></table>-->
         <!--<table schema="" tableName="tb_panel_content"></table>-->
+        <table schema="" tableName="tb_address"></table>
     </context>
 </generatorConfiguration>

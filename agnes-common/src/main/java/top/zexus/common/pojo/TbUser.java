@@ -15,6 +15,8 @@ public class TbUser {
 
     private String img;
 
+    private String address;
+
     public Integer getId() {
         return id;
     }
@@ -69,5 +71,13 @@ public class TbUser {
 
     public void setImg(String img) {
         this.img = img == null ? null : img.trim();
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address == null ? null : address.trim();
     }
 }

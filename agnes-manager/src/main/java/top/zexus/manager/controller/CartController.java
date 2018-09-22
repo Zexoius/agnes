@@ -29,13 +29,6 @@ public class CartController {
                 .put("cartList", result);
     }
 
-    @RequestMapping(value = "/cartList", method = RequestMethod.POST)
-    public Result getCartList(@RequestBody Cart cart) {
-        Result result = cartService.getCartList(cart.getUserId());
-        System.out.println("------获取购物车-----");
-        return result;
-    }
-
     @RequestMapping(value = "/cartDel", method = RequestMethod.POST)
     public Result delCartItem(@RequestBody Cart cart) {
         int result = cartService.delCartListItem(cart.getUserId(), cart.getGoodsId());
@@ -43,6 +36,34 @@ public class CartController {
         return Result.ok()
                 .put("result", result);
     }
+
+    @RequestMapping(value = "/delCartChecked",method = RequestMethod.POST)
+    public Result delChecked(@RequestBody Cart cart){
+        Result result = cartService.delChecked(cart.getUserId());
+        System.out.println("----删除选中----");
+        return result;
+    }
+
+    @RequestMapping(value = "/cartList", method = RequestMethod.POST)
+    public Result getCartList(@RequestBody Cart cart) {
+        Result result = cartService.getCartList(cart.getUserId());
+        System.out.println("------获取购物车-----");
+        return result;
+    }
+
+    @RequestMapping(value = "/isChecked",method = RequestMethod.POST)
+    public Result isChecked(@RequestBody Cart cart){
+        Result result = cartService.checkAll(cart.getUserId(),cart.getChecked());
+        System.out.println("----isCheckAll----");
+        return result;
+    }
+
+    @RequestMapping(value = "/editCart",method = RequestMethod.POST)
+    public Result editCart(@RequestBody Cart cart){
+        Result result = cartService.updateCartNum(cart.getUserId(),cart.getGoodsId(),cart.getGoodsNum(),cart.getChecked());
+        return result;
+    }
+
 
 
 }

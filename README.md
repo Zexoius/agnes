@@ -16,18 +16,18 @@ agnes基于spring cloud和vue微服务，前后分离的移动电商，为入门
 > 可进入`agnes-parent > pom.xml`查看具体依赖。
 
 ### 功能一览
-- [x] 登录
-- [x] 注册
-- [x] 首页
-- [ ] 浏览商品
-- [ ] 下单
-- [x] 购物车
-- [ ] 订单
-- [ ] 地址
+- [x] 用户功能：登录、注册、登出、修改密码等
+- [x] 地址功能：地址的增删查改等
+- [x] 商品功能：浏览、详情等
+- [x] 购物车功能：购物车的增删查改 
 
-### 使用说明
+### 运行说明
 1. 新建数据库，于`agnes-manager > application.yml`修改数据库账号密码。
 2. 启动`agnes-server` 注册中心。
 3. 启动`agnes-zuul` 网关。
 4. 启动`redis-server`缓存。
 5. 启动`agnes-manager`管理中心。
+
+> 确保以下环境已具备：
+> 1. maven使用本地maven配置，于`setting`中搜索配置。
+> 2. 确保本机有`tomcat8.0+`

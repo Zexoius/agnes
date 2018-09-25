@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9b420a55-49d8-4dae-ad1d-83a7c5244d78" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="9b420a55-49d8-4dae-ad1d-83a7c5244d78" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/agnes-parent/target/" />
     <ignored path="$PROJECT_DIR$/agnes-server/target/" />
@@ -64,8 +61,8 @@
       <file leaf-file-name="CartController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/controller/CartController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="163">
+              <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
               <folding>
                 <element signature="method#addCart#0;class#CartController#0" />
                 <element signature="method#delCartItem#0;class#CartController#0" />
@@ -181,7 +178,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-10" />
     <option name="y" value="-10" />
     <option name="width" value="1940" />
@@ -334,7 +331,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -551,7 +548,7 @@
               </StagingTargetModelImpl>
             </list>
           </option>
-          <option name="transportHostId" />
+          <option name="transportHostId" value="" />
           <host-id />
         </data>
       </server-settings>
@@ -646,12 +643,12 @@
       <workItem from="1537580034482" duration="4110000" />
       <workItem from="1537599808339" duration="5194000" />
       <workItem from="1537773445570" duration="832000" />
-      <workItem from="1537775329458" duration="553000" />
+      <workItem from="1537775329458" duration="1296000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="261100000" />
+    <option name="totallyTimeSpent" value="261843000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -664,7 +661,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" weight="0.3296" />
@@ -715,13 +711,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.15/tomcat-embed-core-8.5.15.jar!/org/apache/coyote/AbstractProtocol.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="724" selection-start-line="724" selection-end-line="724" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.15/tomcat-embed-core-8.5.15.jar!/org/apache/coyote/AbstractProcessorLight.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
@@ -841,22 +830,22 @@
           <OriginalElement>module=agnes-manager</OriginalElement>
           <nodes>
             <node x="" y="">module=agnes-manager</node>
-            <node x="" y="">fileset=agnes-manager/ApplicationContext Redis</node>
+            <node x="" y="" />
             <node x="" y="">fileset=agnes-manager/AgnesManagerApplication</node>
             <node x="" y="">top.zexus.manager.AgnesManagerApplication</node>
             <node x="" y="">top.zexus.common.AgnesCommonApplication</node>
             <node x="" y="">org.springframework.boot.autoconfigure.SpringBootApplication</node>
             <node x="" y="">org.springframework.cloud.netflix.feign.EnableFeignClients</node>
             <node x="" y="">org.mybatis.spring.annotation.MapperScan</node>
-            <node x="" y="">fileset=agnes-manager/AgnesManagerApplication Bootstrap</node>
-            <node x="" y="">fileset=agnes-manager/AgnesManagerApplication MVC</node>
+            <node x="" y="" />
+            <node x="" y="" />
           </nodes>
           <notes />
           <edges />
           <settings layout="Hierarchic Group" zoom="0.7958303378864127" x="686.0" y="154.0" />
           <SelectedNodes />
           <Categories>
-            <Category>Show filesets as groups</Category>
+            <Category />
           </Categories>
           <SCOPE>All</SCOPE>
         </state>
@@ -1092,10 +1081,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://E:/apache-maven-3.5.3/conf/settings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="260" column="27" selection-start-line="260" selection-start-column="27" selection-end-line="260" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/controller/CartController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="163">
+          <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
           <folding>
             <element signature="method#addCart#0;class#CartController#0" />
             <element signature="method#delCartItem#0;class#CartController#0" />
@@ -1124,7 +1120,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited />
+          <last-edited>Spring (agnes-server)|Spring</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1159,7 +1155,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>agnes-common</last-edited>
+          <last-edited>agnes-zuul</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1184,7 +1180,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited />
+          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

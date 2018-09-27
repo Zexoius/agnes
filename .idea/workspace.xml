@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9b420a55-49d8-4dae-ad1d-83a7c5244d78" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/SwaggerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agnes-manager/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-manager/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/controller/AddressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/controller/AddressController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/controller/CartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/controller/GoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/controller/GoodsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agnes-manager/target/classes/top/zexus/manager/controller/AddressController.class" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-manager/target/classes/top/zexus/manager/controller/AddressController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agnes-manager/target/classes/top/zexus/manager/controller/CartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-manager/target/classes/top/zexus/manager/controller/CartController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agnes-manager/target/classes/top/zexus/manager/controller/GoodsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-manager/target/classes/top/zexus/manager/controller/GoodsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agnes-manager/target/classes/top/zexus/manager/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-manager/target/classes/top/zexus/manager/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agnes-parent/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-parent/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="9b420a55-49d8-4dae-ad1d-83a7c5244d78" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/agnes-parent/target/" />
     <ignored path="$PROJECT_DIR$/agnes-server/target/" />
@@ -94,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="45" column="33" lean-forward="true" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
+            <state relative-caret-position="272">
+              <caret line="47" column="44" lean-forward="true" selection-start-line="47" selection-start-column="44" selection-end-line="47" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -130,11 +117,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginDto.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LoginDto.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/pojo/dto/LoginDto.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+            <state relative-caret-position="133">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -682,12 +669,12 @@
       <workItem from="1537838785892" duration="795000" />
       <workItem from="1537864230278" duration="1113000" />
       <workItem from="1537950767114" duration="293000" />
-      <workItem from="1538029477127" duration="7502000" />
+      <workItem from="1538029477127" duration="8281000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="271546000" />
+    <option name="totallyTimeSpent" value="272325000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -700,7 +687,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" weight="0.3296" />
@@ -720,10 +706,10 @@
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32763976" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2352" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4832" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32919255" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49809885" visible="true" weight="0.25067386" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49809885" visible="true" weight="0.25067386" />
       <window_info anchor="right" id="Bean Validation" order="8" />
       <window_info id="Web" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3296" />
@@ -1128,13 +1114,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/pojo/dto/LoginDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/agnes-common/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1144,8 +1123,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="45" column="33" lean-forward="true" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
+        <state relative-caret-position="272">
+          <caret line="47" column="44" lean-forward="true" selection-start-line="47" selection-start-column="44" selection-end-line="47" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/pojo/dto/LoginDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>

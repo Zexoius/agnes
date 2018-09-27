@@ -14,6 +14,7 @@ agnes基于spring cloud和vue微服务，前后分离的移动电商，为入门
  - 相关插件：mybatis-generator
 
 > 可进入`agnes-parent > pom.xml`查看具体依赖。
+> 进入 localhost:8004/swagger-ui.html#/ 查看具体接口文档（须已在本机运行）
 
 ### 功能一览
 - [x] 用户功能：登录、注册、登出、修改密码等

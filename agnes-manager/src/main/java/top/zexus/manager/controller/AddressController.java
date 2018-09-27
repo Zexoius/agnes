@@ -1,7 +1,7 @@
 package top.zexus.manager.controller;
 
-import com.sun.xml.internal.bind.v2.TODO;
-import javafx.geometry.Pos;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -20,38 +20,44 @@ import javax.annotation.Resource;
 
 @RequestMapping("/address")
 @RestController
+@Api(description = "管理收货地址")
 public class AddressController {
     @Resource
     private AddressService addressService;
 
-    @RequestMapping(value = "/addAddress",method = RequestMethod.POST)
-    public Result addAddress(@RequestBody TbAddress tbAddress){
+    @ApiOperation(value = "添加收货地址")
+    @RequestMapping(value = "/addAddress", method = RequestMethod.POST)
+    public Result addAddress(@RequestBody TbAddress tbAddress) {
         Result result = addressService.addAddress(tbAddress);
         return result;
     }
 
-    @RequestMapping(value = "/delAddress",method = RequestMethod.POST)
-    public Result delAddress(@RequestBody TbAddress tbAddress){
+    @ApiOperation(value = "删除收货地址")
+    @RequestMapping(value = "/delAddress", method = RequestMethod.POST)
+    public Result delAddress(@RequestBody TbAddress tbAddress) {
         Result result = addressService.delAddress(tbAddress);
         return result;
     }
 
-    @RequestMapping(value = "/addressList",method = RequestMethod.POST)
-    public Result getAddressList(@RequestBody TbAddress tbAddress){
+    @ApiOperation(value = "获取所有收货地址")
+    @RequestMapping(value = "/addressList", method = RequestMethod.POST)
+    public Result getAddressList(@RequestBody TbAddress tbAddress) {
         Result result = addressService.getAddressList(tbAddress.getUserId());
         System.out.println("----getAddressList----");
         return result;
     }
 
-//    TODO: getAddress
-    @RequestMapping(value = "/getAddress",method = RequestMethod.POST)
-    public Result getAddress(@RequestBody TbAddress tbAddress){
+    //    TODO: getAddress
+    @ApiOperation(value = "获取单条收货地址")
+    @RequestMapping(value = "/getAddress", method = RequestMethod.POST)
+    public Result getAddress(@RequestBody TbAddress tbAddress) {
         Result result = addressService.getAddress(tbAddress.getAddressId());
         return result;
     }
 
-    @RequestMapping(value = "/updateAddress",method = RequestMethod.POST)
-    public Result updateAddress(@RequestBody TbAddress tbAddress){
+    @ApiOperation(value = "更新地址信息")
+    @RequestMapping(value = "/updateAddress", method = RequestMethod.POST)
+    public Result updateAddress(@RequestBody TbAddress tbAddress) {
         Result result = addressService.updateAddress(tbAddress);
         return result;
     }

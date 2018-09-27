@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
@@ -16,7 +16,7 @@
         <module>../agnes-zuul</module>
     </modules>
 
-  <properties>
+    <properties>
         <spring-cloud.version>Edgware.RELEASE</spring-cloud.version>
         <spring-boot.version>1.5.4.RELEASE</spring-boot.version>
         <jjwt.version>0.7.0</jjwt.version>
@@ -24,6 +24,8 @@
         <apache-common.version>RELEASE</apache-common.version>
         <fastJSON.version>RELEASE</fastJSON.version>
         <pagehelper.version>4.1.6</pagehelper.version>
+        <swagger2.version>2.7.0</swagger2.version>
+        <swagger-ui.version>2.7.0</swagger-ui.version>
     </properties>
 
     <dependencyManagement>
@@ -74,8 +76,19 @@
                 <artifactId>fastjson</artifactId>
                 <version>${fastJSON.version}</version>
             </dependency>
+            <!--swagger-->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swagger2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${swagger-ui.version}</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>
-    
+
 </project>

@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b420a55-49d8-4dae-ad1d-83a7c5244d78" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/constants/CommonConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-common/src/main/java/top/zexus/common/constants/CommonConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/Redis/RedisUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/Redis/RedisUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/service/impl/CartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/service/impl/CartServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/service/impl/GoodsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/service/impl/GoodsServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/service/impl/UserServiceImpl.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -62,8 +57,8 @@
       <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/service/impl/UserServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="45" column="9" lean-forward="true" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+            <state relative-caret-position="197">
+              <caret line="53" column="43" selection-start-line="53" selection-start-column="43" selection-end-line="53" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -198,11 +193,11 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-10" />
-    <option name="y" value="-10" />
-    <option name="width" value="1940" />
-    <option name="height" value="1050" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -664,12 +659,12 @@
       <workItem from="1537950767114" duration="293000" />
       <workItem from="1538029477127" duration="8624000" />
       <workItem from="1538040220948" duration="805000" />
-      <workItem from="1538097575751" duration="2303000" />
+      <workItem from="1538097575751" duration="2988000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="275776000" />
+    <option name="totallyTimeSpent" value="276461000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -696,16 +691,16 @@
       <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.536" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.328" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.2416" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.32763976" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3552" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2784" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32919255" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49809885" visible="true" weight="0.2587601" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49809885" visible="true" weight="0.2587601" />
       <window_info anchor="right" id="Bean Validation" order="8" />
       <window_info id="Web" order="6" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="7" />
@@ -1111,8 +1106,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/agnes-manager/src/main/java/top/zexus/manager/service/impl/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="45" column="9" lean-forward="true" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+        <state relative-caret-position="197">
+          <caret line="53" column="43" selection-start-line="53" selection-start-column="43" selection-end-line="53" selection-end-column="43" />
         </state>
       </provider>
     </entry>

@@ -2,6 +2,7 @@ package top.zexus.manager.service.impl;
 
 import com.google.gson.Gson;
 import org.springframework.stereotype.Service;
+import org.springframework.util.DigestUtils;
 import top.zexus.common.constants.CommonConstants;
 import top.zexus.common.mapper.TbUserMapper;
 import top.zexus.common.pojo.TbUser;
@@ -45,12 +46,14 @@ public class UserServiceImpl implements UserService {
                     .put("state", 0);
         }
         TbUser tbUser = list.get(0);
-        if (null == tbUser || !password.equals(tbUser.getPassword())) {
-//            User user = new User();
-//            user.setState(0);
-//            user.setMsg("用户名或密码错误");
-            return Result.error("用户名或密码错误")
-                    .put("state", 0);
+//        if (null == tbUser || !password.equals(tbUser.getPassword())) {
+//            return Result.error("用户名或密码错误")
+//                    .put("state", 0);
+//        }
+        if (!DigestUtils.md5DigestAsHex(password.getBytes()).equals(tbUser.getPassword())){
+            System.out.println("加密后密码：---->"+DigestUtils.md5DigestAsHex(password.getBytes()));
+            return Result.error("密码错误")
+                    .put("state",0);
         }
         User user = DtoUtils.TbUser2User(tbUser);
         UserToken userToken = new UserToken(user.getId().toString(), user.getUsername());

@@ -2,6 +2,7 @@ package top.zexus.manager.service.impl;
 
 import com.google.gson.Gson;
 import org.springframework.stereotype.Service;
+import top.zexus.common.constants.CommonConstants;
 import top.zexus.common.mapper.TbProductMapper;
 import top.zexus.common.pojo.TbProduct;
 import top.zexus.common.pojo.dto.CartList;
@@ -21,7 +22,7 @@ import java.util.List;
  */
 @Service
 public class CartServiceImpl implements CartService {
-    private final String CART = "CART";
+//    private final String CART = "CART";
     @Resource
     private RedisClient redisClient;
     @Resource
@@ -29,9 +30,9 @@ public class CartServiceImpl implements CartService {
 
     @Override
     public int addCart(long userId, long goodsId, int num) {
-        Boolean flag = redisClient.hexists(CART + ":" + userId, "" + goodsId);
+        Boolean flag = redisClient.hexists(CommonConstants.CART + ":" + userId, "" + goodsId);
         if (flag) {
-            Object room = redisClient.hget(CART + ":" + userId, "" + goodsId);
+            Object room = redisClient.hget(CommonConstants.CART + ":" + userId, "" + goodsId);
             try {
                 if (room == null) {
                     throw new Exception("查无商品");
@@ -42,7 +43,7 @@ public class CartServiceImpl implements CartService {
             String json = (String) room;
             CartList cartList = new Gson().fromJson(json, CartList.class);
             cartList.setGoodsNum(cartList.getGoodsNum() + num);
-            redisClient.hset(CART + ":" + userId, "" + goodsId, new Gson().toJson(cartList));
+            redisClient.hset(CommonConstants.CART + ":" + userId, "" + goodsId, new Gson().toJson(cartList));
             return 1;
         } else {
             TbProduct tbProduct = tbProductMapper.selectByPrimaryKey(goodsId);
@@ -53,20 +54,20 @@ public class CartServiceImpl implements CartService {
             cartList.setGoodsNum((long) num);
             cartList.setChecked("1");
 //            cartList.setProductImg(tbProduct.getImage());
-            redisClient.hset(CART + ":" + userId, "" + goodsId, new Gson().toJson(cartList));
+            redisClient.hset(CommonConstants.CART + ":" + userId, "" + goodsId, new Gson().toJson(cartList));
             return 1;
         }
     }
 
     @Override
     public int delCartListItem(long userId, long goodsId) {
-        redisClient.hdel(CART + ":" + userId, "" + goodsId);
+        redisClient.hdel(CommonConstants.CART + ":" + userId, "" + goodsId);
         return 1;
     }
 
     @Override
     public Result getCartList(long userId) {
-        List<Object> room = redisClient.hvals(CART + ":" + userId);
+        List<Object> room = redisClient.hvals(CommonConstants.CART + ":" + userId);
         List<String> jsonList = (List<String>) (List) room;
         List<CartList> list = new ArrayList<>();
         for (String json : jsonList) {
@@ -79,7 +80,7 @@ public class CartServiceImpl implements CartService {
 
     @Override
     public Result checkAll(long userId, String checked) {
-        List<Object> room = redisClient.hvals(CART + ":" + userId);
+        List<Object> room = redisClient.hvals(CommonConstants.CART + ":" + userId);
         List<String> jsonList = (List<String>) (List) room;
         for (String json : jsonList){
             CartList cartList = new Gson().fromJson(json,CartList.class);
@@ -90,19 +91,19 @@ public class CartServiceImpl implements CartService {
             }else {
                 return Result.error();
             }
-            redisClient.hset(CART + ":" + userId,"" + cartList.getGoodsId(),new  Gson().toJson(cartList));
+            redisClient.hset(CommonConstants.CART + ":" + userId,"" + cartList.getGoodsId(),new  Gson().toJson(cartList));
         }
         return Result.ok();
     }
 
     @Override
     public Result delChecked(long userId) {
-        List<Object> room = redisClient.hvals(CART + ":" + userId);
+        List<Object> room = redisClient.hvals(CommonConstants.CART + ":" + userId);
         List<String> jsonList = (List<String>) (List) room;
         for (String json : jsonList){
             CartList cartList = new Gson().fromJson(json,CartList.class);
             if (cartList.getChecked().equals("1")){
-                redisClient.hdel(CART + ":" + userId,"" + cartList.getGoodsId());
+                redisClient.hdel(CommonConstants.CART + ":" + userId,"" + cartList.getGoodsId());
             }
         }
         return Result.ok();
@@ -110,14 +111,14 @@ public class CartServiceImpl implements CartService {
 
     @Override
     public Result updateCartNum(long userId, long goodsId, int num, String checked) {
-        String json = (String) redisClient.hget(CART + ":" + userId,"" + goodsId);
+        String json = (String) redisClient.hget(CommonConstants.CART + ":" + userId,"" + goodsId);
         if (json == null){
             return Result.error("查无商品");
         }
         CartList cartList = new Gson().fromJson(json,CartList.class);
         cartList.setGoodsNum((long) num);
         cartList.setChecked(checked);
-        redisClient.hset(CART + ":" + userId,"" + goodsId,new Gson().toJson(cartList));
+        redisClient.hset(CommonConstants.CART + ":" + userId,"" + goodsId,new Gson().toJson(cartList));
         return Result.ok();
     }
 }

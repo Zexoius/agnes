@@ -5,6 +5,7 @@ import com.github.pagehelper.PageInfo;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import org.springframework.stereotype.Service;
+import top.zexus.common.constants.CommonConstants;
 import top.zexus.common.mapper.TbPanelContentMapper;
 import top.zexus.common.mapper.TbPanelMapper;
 import top.zexus.common.mapper.TbProductDetailMapper;
@@ -29,8 +30,8 @@ import java.util.List;
  */
 @Service
 public class GoodsServiceImpl implements GoodsService {
-    private final String HOME = "HOME";
-    private final String PRODUCT_DET = "PRODUCT_DET";
+//    private final String HOME = "HOME";
+//    private final String PRODUCT_DET = "PRODUCT_DET";
     @Resource
     TbProductMapper tbProductMapper;
     @Resource
@@ -45,7 +46,7 @@ public class GoodsServiceImpl implements GoodsService {
     @Override
     public Result goodsDetail(Long goodsId) {
         try {
-            String json = redisClient.get(PRODUCT_DET + ":" + goodsId);
+            String json = redisClient.get(CommonConstants.PRODUCT_DET + ":" + goodsId);
             if (json != null) {
                 GoodsDetail goodsDetail = new Gson().fromJson(json, GoodsDetail.class);
                 System.out.println("读取商品详情缓存");
@@ -74,7 +75,7 @@ public class GoodsServiceImpl implements GoodsService {
             detail.setProductImageSmall(list);
         }
         try {
-            redisClient.set(PRODUCT_DET + ":" + goodsId, new Gson().toJson(detail));
+            redisClient.set(CommonConstants.PRODUCT_DET + ":" + goodsId, new Gson().toJson(detail));
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -125,7 +126,7 @@ public class GoodsServiceImpl implements GoodsService {
         List<TbPanel> list = new ArrayList<>();
 //       读取缓存
         try {
-            String json = redisClient.get(HOME);
+            String json = redisClient.get(CommonConstants.HOME);
             if (json != null) {
                 list = new Gson().fromJson(json, new TypeToken<List<TbPanel>>() {
                 }.getType());
@@ -167,7 +168,7 @@ public class GoodsServiceImpl implements GoodsService {
         }
 //        添加缓存
         try {
-            redisClient.set(HOME, new Gson().toJson(list));
+            redisClient.set(CommonConstants.HOME, new Gson().toJson(list));
             System.out.println("添加首页缓存");
         } catch (Exception e) {
             e.printStackTrace();

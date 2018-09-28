@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50533
 File Encoding         : 65001
 
-Date: 2018-09-24 20:27:40
+Date: 2018-09-28 10:15:05
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -254,10 +254,12 @@ CREATE TABLE `tb_user` (
   `img` varchar(255) DEFAULT NULL COMMENT '头像',
   `address` varchar(255) DEFAULT NULL COMMENT '地址',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tb_user
 -- ----------------------------
-INSERT INTO `tb_user` VALUES ('1', 'admin', 'admin', '7758258', '0', '1', 'http://pa6r78di4.bkt.clouddn.com/avator.jpg', null);
+INSERT INTO `tb_user` VALUES ('1', 'admin', '21232f297a57a5a743894a0e4a801fc3', '7758258', '0', '1', 'http://pa6r78di4.bkt.clouddn.com/avator.jpg', null);
 INSERT INTO `tb_user` VALUES ('2', 'test', 'test', null, null, null, 'http://pa6r78di4.bkt.clouddn.com/avator.jpg', null);
+INSERT INTO `tb_user` VALUES ('3', 'test1', 'testP', null, null, null, null, null);
+INSERT INTO `tb_user` VALUES ('4', 'test1', 'test1', null, null, null, null, null);
